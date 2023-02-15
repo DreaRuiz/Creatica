@@ -43,8 +43,6 @@ function Register() {
   };
   return (
     <>
-{/*       <HeaderHome /> */}
-
       <div>
         <h2>Crea tu cuenta</h2>
         <form>
@@ -76,13 +74,13 @@ function Register() {
             />
           </div>
           <button type="submit" onClick={onSubmit}>
-            Sign up
+            Regístrate
           </button>
           <p>
-            Already have an account?
-            <Link className="link" to="/login/">
+            ¿Ya tienes cuenta?
+            <Link to="/login/">
               {" "}
-              Log in{" "}
+              Inicia sesión{" "}
             </Link>
           </p>
         </form>

@@ -6,9 +6,7 @@ function UserMenu() {
   return (
     <>
       <HeaderUser />
-
       UserMenu
-
       <Footer/>
     </>
   );

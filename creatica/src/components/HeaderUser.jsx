@@ -12,12 +12,14 @@ const logout = () => {
   
   return (
     <>
-      {/*       // TODO: Logout */}
-      HEADER-USER
+      HEADER-USER :
       <div>
         <Link to="/">HOME </Link>
         <Link to="/Description">DESCRIPTION </Link>
         <Link to="/About">ABOUT </Link>
+      </div>
+      <div>
+     <Link onClick={logout}>Cerrar sesión</Link>
       </div>
       <div>
         <Link to="/UserMenu">USER MENU</Link>
@@ -28,9 +30,7 @@ const logout = () => {
         <Link to="/ToDoList">TO DO LIST </Link>
         <Link to="/Calendar">CALENDAR </Link>
       </div>
-      <div>
-     <button onClick={logout}>Cerrar sesión</button>
-      </div>
+    
     </>
   );
 };

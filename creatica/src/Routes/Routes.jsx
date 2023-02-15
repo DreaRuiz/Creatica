@@ -12,6 +12,7 @@ import ErrorPage from "../pages/publicPages/ErrorPage";
 import Register from "../pages/publicPages/Register";
 import Description from "../pages/publicPages/Description";
 import About from "../pages/publicPages/About";
+import ForgotPassword from "../pages/publicPages/ForgotPassword";
 
 // Rutes privades
 import UserMenu from "../pages/privatePages/UserMenu";
@@ -24,19 +25,17 @@ import Recommendations from "../pages/privatePages/Recommendations";
 
 const Router = () => (
   <AuthProvider>
-  <BrowserRouter>
-    <Routes>
-   
+    <BrowserRouter>
+      <Routes>
         {/* RUTES PÚBLIQUES */}
         <Route index element={<Welcome />}></Route>
         <Route path="/welcome" element={<Welcome />}></Route>
-        <Route path="/login/" element={<Login />} />
-        <Route path="*" element={<ErrorPage />} />
-        {/*           <Route path="/forgot-password" element={<ForgotPassword />} /> */}
-
-        <Route path="/register/" element={<Register />} />
         <Route path="/description/" element={<Description />} />
         <Route path="/about/" element={<About />} />
+        <Route path="/login/" element={<Login />} />
+        <Route path="/register/" element={<Register />} />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
+        <Route path="*" element={<ErrorPage />} />
 
         {/* RUTES PRIVADES */}
         <Route
@@ -101,9 +100,8 @@ const Router = () => (
             </PrivateRoute>
           }
         />
-
-    </Routes>
-  </BrowserRouter>
+      </Routes>
+    </BrowserRouter>
   </AuthProvider>
 );
 

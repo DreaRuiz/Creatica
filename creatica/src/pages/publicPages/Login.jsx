@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
-/* import { HeaderHome } from "../../components/HeaderHome"; */
 
-// Components de Firebase
-import {
-  signInWithEmailAndPassword
-} from "firebase/auth";
+// COMPONENTS DE FIREBASE
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../config/firebase";
-import resetPassword from '../../Context/AuthContext'
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -37,9 +34,8 @@ const Login = () => {
 
   return (
     <>
-      {/*       <HeaderHome /> */}
       <div>
-        <h2>Login</h2>
+        <h2>Inicia sesión</h2>
         <form>
           <div>
             <input
@@ -59,18 +55,20 @@ const Login = () => {
             />
           </div>
           <button type="submit" onClick={onLogin}>
-            Log in
+            Iniciar sesión
           </button>
           <p>
             ¿Aún no tienes cuenta?
-            <Link className="link" to="/register/">
+            <Link type="link" to="/register/">
               {" "}
-              Sign up{" "}
+              Regístrate{" "}
             </Link>
           </p>
-     {/*      <button onClick={resetPassword}>Reestablecer contrasña</button> */}
+          <Link type="link" to="/ForgotPassword">
+            {" "}
+            ¿Has olvidado tu contraseña?{" "}
+          </Link>
         </form>
-          
       </div>
 
       <Footer />
