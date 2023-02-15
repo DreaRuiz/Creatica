@@ -4,8 +4,11 @@ import Footer from "../../components/Footer";
 /* import { HeaderHome } from "../../components/HeaderHome"; */
 
 // Components de Firebase
-import { signInWithEmailAndPassword } from "firebase/auth";
+import {
+  signInWithEmailAndPassword
+} from "firebase/auth";
 import { auth } from "../../config/firebase";
+import resetPassword from '../../Context/AuthContext'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -19,12 +22,11 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        navigate("/");
+        navigate("/UserMenu");
         sessionStorage.setItem(
           "Auth Token",
           userCredential._tokenResponse.refreshToken
         );
-
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -35,7 +37,7 @@ const Login = () => {
 
   return (
     <>
-{/*       <HeaderHome /> */}
+      {/*       <HeaderHome /> */}
       <div>
         <h2>Login</h2>
         <form>
@@ -49,7 +51,7 @@ const Login = () => {
             />
             <input
               type="password"
-              placeholder="Introduce la c"
+              placeholder="Contraseña"
               minLength="6"
               required
               autoComplete="off"
@@ -61,14 +63,19 @@ const Login = () => {
           </button>
           <p>
             ¿Aún no tienes cuenta?
-            <Link  className="link" to="/register/"> Sign up </Link>
+            <Link className="link" to="/register/">
+              {" "}
+              Sign up{" "}
+            </Link>
           </p>
+     {/*      <button onClick={resetPassword}>Reestablecer contrasña</button> */}
         </form>
+          
       </div>
-      
+
       <Footer />
     </>
   );
 };
 
-export default Login
+export default Login;
