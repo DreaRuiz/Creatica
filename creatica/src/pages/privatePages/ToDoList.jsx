@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import TaskForm from "../../components/toDoList/TaskForm";
+import TaskList from "../../components/toDoList/TaskList";
 
 function ToDoList() {
   return (
-    <div>ToDoList</div>
-  )
+    <>
+      ToDoList
+      <TaskForm />
+      <TaskList />
+    </>
+  );
 }
 
-export default ToDoList
+export default ToDoList;

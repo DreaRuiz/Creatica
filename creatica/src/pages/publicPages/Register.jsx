@@ -7,7 +7,6 @@ import Footer from "../../components/Footer";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../config/firebase";
 import { ref, set, onValue } from "firebase/database";
-
 function Register() {
   const navigate = useNavigate();
 
@@ -38,7 +37,6 @@ function Register() {
     let data = ref(db, "users/");
     onValue(data, (snapshot) => {
       data = snapshot.val();
-      console.log(data);
     });
   };
   return (
