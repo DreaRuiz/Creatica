@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
-/* import { HeaderHome } from "../../components/HeaderHome"; */
+import register from "../../assets/register.png"
 
 // Components de Firebase
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -41,9 +41,9 @@ function Register() {
   };
   return (
     <>
-      <div>
-        <h2>Crea tu cuenta</h2>
-        <form>
+      <div className="register">
+      <h1>¡HOLA!</h1>
+        <form className="registerForm">
           <div>
             <input
               type="text"
@@ -71,20 +71,19 @@ function Register() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit" onClick={onSubmit}>
-            Regístrate
+          <button className="login" type="submit" onClick={onSubmit}>
+            REGÍSTRATE
           </button>
-          <p>
-            ¿Ya tienes cuenta?
-            <Link to="/login/">
-              {" "}
-              Inicia sesión{" "}
-            </Link>
-          </p>
+          <div>
+          <Link className="subtextLogin" to="/login/">
+            {" "}
+            O INICIA SESIÓN{" "}
+          </Link>
+          </div>
         </form>
+        
       </div>
 
-      <Footer />
     </>
   );
 }

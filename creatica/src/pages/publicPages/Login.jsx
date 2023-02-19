@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Footer from "../../components/Footer";
+import login from "../../assets/login.png"
 
 // COMPONENTS DE FIREBASE
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../config/firebase";
-
 
 const Login = () => {
   const navigate = useNavigate();
@@ -34,10 +33,14 @@ const Login = () => {
 
   return (
     <>
-      <div>
-        <h2>Inicia sesión</h2>
-        <form>
-          <div>
+      <div className="loginWindow">
+        <h1>¡HOLA!</h1>
+        <div>
+<img className="imageLogin" src={login}></img>
+        </div>
+
+        <form >
+          <div className="loginBox">
             <input
               type="email"
               placeholder="Introduce tu email"
@@ -53,25 +56,22 @@ const Login = () => {
               autoComplete="off"
               onChange={(e) => setPassword(e.target.value)}
             />
-          </div>
-          <button type="submit" onClick={onLogin}>
-            Iniciar sesión
-          </button>
-          <p>
-            ¿Aún no tienes cuenta?
-            <Link type="link" to="/register/">
+            <Link className="forgotPass" type="link" to="/ForgotPassword">
               {" "}
-              Regístrate{" "}
+              ¿Has olvidado tu contraseña?{" "}
             </Link>
-          </p>
-          <Link type="link" to="/ForgotPassword">
-            {" "}
-            ¿Has olvidado tu contraseña?{" "}
-          </Link>
+          </div>
+          <button className="login" type="submit" onClick={onLogin}>
+            INICIA SESIÓN
+          </button>
+          <div>
+            <Link className="subtextLogin" type="link" to="/register/">
+              {" "}
+              O CREA UNA CUENTA{" "}
+            </Link>
+          </div>
         </form>
       </div>
-
-      <Footer />
     </>
   );
 };

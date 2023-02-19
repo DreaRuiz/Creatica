@@ -3,6 +3,8 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBfnCi4ZggOaOwNfnVBLb8cvOLw3o8xAns",

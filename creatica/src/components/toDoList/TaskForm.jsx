@@ -3,8 +3,8 @@ import { TaskContext } from "../../Context/TaskContext";
 
 function TaskForm() {
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
   const [phase, setPhase] = useState("");
+  const [description, setDescription] = useState("");
   const { createTask } = useContext(TaskContext);
 
   const handleSubmit = (e) => {

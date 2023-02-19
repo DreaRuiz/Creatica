@@ -6,6 +6,7 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 
+// TODO: Fer que es mantingui logejat l'user
 export const AuthContext = React.createContext();
 // CONTEXT PER LA GESTIÓ D'USERS
 export function useAuth() {

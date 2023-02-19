@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useRef } from "react";
+import comofunciona from "../../assets/comofunciona.png";
 
 import { Link } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
@@ -24,12 +25,14 @@ const ForgotPassword = () => {
       setError("Fallo al cambiar la contraseña");
       console.error(error);
     }
-
-};
+  };
   return (
     <>
       <div>
-        <h1>Reestablecer contraseña</h1>
+        <h3>REESTABLECER CONTRASEÑA</h3>
+        <div>
+          <img src={comofunciona}></img>
+        </div>
         {error && (
           <>
             <div>
@@ -77,17 +80,14 @@ const ForgotPassword = () => {
                 required
               />
             </label>
-            <div></div>
+
             <button>
-              <span>Reestablecer contraseña</span>
+              <span>ENVIAR EMAIL</span>
             </button>
 
             <p>
               {" "}
-              ¿Necesitas una cuenta?{" "}
-              <Link to="/register">
-                Regístrate
-              </Link>
+              ¿Necesitas una cuenta? <Link to="/register">Regístrate</Link>
             </p>
           </div>
         </form>
@@ -95,4 +95,4 @@ const ForgotPassword = () => {
     </>
   );
 };
-export default ForgotPassword
+export default ForgotPassword;
