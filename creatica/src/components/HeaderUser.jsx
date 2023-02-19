@@ -12,11 +12,8 @@ const logout = () => {
   
   return (
     <>
-      HEADER-USER :
       <div>
         <Link to="/">HOME </Link>
-        <Link to="/Description">DESCRIPTION </Link>
-        <Link to="/About">ABOUT </Link>
       </div>
       <div>
      <Link onClick={logout}>Cerrar sesión</Link>
@@ -24,11 +21,11 @@ const logout = () => {
       <div>
         <Link to="/UserMenu">USER MENU</Link>
         <Link to="/Phases">PHASES</Link>
-        <Link to="/Evolution">EVOLUTION </Link>
+   {/*      <Link to="/Evolution">EVOLUTION </Link> */}
         <Link to="/Tracking">TRACKING </Link>
-        <Link to="/Recommendations">RECCOMENDATIONS</Link>
+     {/*    <Link to="/Recommendations">RECCOMENDATIONS</Link> */}
         <Link to="/ToDoList">TO DO LIST </Link>
-        <Link to="/Calendar">CALENDAR </Link>
+    {/*     <Link to="/Calendar">CALENDAR </Link> */}
       </div>
     
     </>

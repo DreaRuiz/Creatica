@@ -20,7 +20,7 @@ import ToDoList from "../pages/privatePages/ToDoList";
 import Calendar from "../pages/privatePages/Calendar";
 import Phases from "../pages/privatePages/Phases";
 import Evolution from "../pages/privatePages/Evolution";
-import Tracking from "../pages/privatePages/Tracking";
+import Tracking from "../pages/privatePages/trackingPages/Tracking";
 import Recommendations from "../pages/privatePages/Recommendations";
 
 const Router = () => (

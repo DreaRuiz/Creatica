@@ -33,6 +33,7 @@ body {
   min-height: 100vh;
   align-items: center;
   text-align: center;
+  justify-items: center;
 
 }
 
@@ -66,19 +67,38 @@ h3 {
   color: #000000;
   mix-blend-mode: normal;
 }
+h4 {
+  width: 300px;
+  height: 61px;
+  left: 0px;
+  top: 105px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000; 
+  margin-left: 10%;
+  margin-right: 10%;
+
+ 
+}
 
 p {
   width: 300px;
   height: 180px;
   left: 38px;
   top: calc(50% - 180px/2 - 170px);
-
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: #474747;
+}
+.sectionTitle {
+  margin-left: 15px;
 }
 
 input {
@@ -206,4 +226,63 @@ margin-top: -20px;
 }
 .registerForm{
  margin-top: 200px;
+}
+
+/* WELCOME */
+.welcome {
+  align-items: center;
+  justify-content: center;
+  display: block;
+}
+.text {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* TO DO LIST */
+.todolist{
+  flex-direction: column;
+}
+.taskListStyle {
+  margin-top: 2vh;
+  margin-left: 5%;
+  margin-bottom: 2vh;
+  padding: 1vh;
+  text-align: center;
+  border: 2px solid #000000;
+  border-radius: 30px;
+  width: 80%;
+  justify-items: center;
+  align-items: center;
+}
+
+.textTask{
+  color: #474747;;
+  font-family: 'Inter';
+  text-align: left;
+}
+
+/* TRACKING */
+.trackButton {
+display: column;
+border: 2px solid #000000;
+width: 300px;
+height: 120px;
+left: 28px;
+top: 211px;
+margin-bottom: 10px;
+background: #FFFFFF;
+mix-blend-mode: normal;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 92px;
+}
+.imageDown {
+  margin-bottom: 20px;
+  height: 280px;
+}
+
+.imageFocus{
+  background-image: url("./assets/trackFoco.png");
+  background-repeat: no-repeat;
+ margin-top: -170px;
 }

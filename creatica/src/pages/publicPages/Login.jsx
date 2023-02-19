@@ -40,7 +40,7 @@ const Login = () => {
         </div>
 
         <form >
-          <div className="loginBox">
+          <div >
             <input
               type="email"
               placeholder="Introduce tu email"
@@ -56,10 +56,12 @@ const Login = () => {
               autoComplete="off"
               onChange={(e) => setPassword(e.target.value)}
             />
+            <div>
             <Link className="forgotPass" type="link" to="/ForgotPassword">
               {" "}
               ¿Has olvidado tu contraseña?{" "}
             </Link>
+            </div>
           </div>
           <button className="login" type="submit" onClick={onLogin}>
             INICIA SESIÓN

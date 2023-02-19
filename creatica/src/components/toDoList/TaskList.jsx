@@ -6,14 +6,16 @@ function TaskList() {
 
   const { tasks } = useContext(TaskContext);
   if (tasks.length === 0) {
-    return <h1>Cap tasca pendent</h1>;
+    return <h4>No hay tareas pendientes</h4>;
   }
 
   return (
     <div>
+    <div className="taskListStyle">
       {tasks.map((task, index) => (
         <TaskCard key={index} task={task} />
       ))}
+    </div>
     </div>
   );
 }
