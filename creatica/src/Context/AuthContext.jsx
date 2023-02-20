@@ -18,6 +18,8 @@ const AuthProvider = ({ children }) => {
 
   function signup(email, password) {
     createUserWithEmailAndPassword(auth, email, password);
+
+    //aquí crear la colecció USERS
   }
 
   function resetPassword(email) {
