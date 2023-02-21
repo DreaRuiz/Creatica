@@ -23,7 +23,7 @@ const ForgotPassword = () => {
       setMessage("Sigue las instrucciones en tu email");
     } catch (error) {
       setError("Fallo al cambiar la contraseña");
-      console.error(error);
+      console.log(error);
     }
   };
   return (

@@ -34,10 +34,10 @@ function Register() {
     navigate("/");
 
     //IMPORTA USER I MOSTRA PER CONSOLA
-    let data = ref(db, "users/");
+/*     let data = ref(db, "users/");
     onValue(data, (snapshot) => {
       data = snapshot.val();
-    });
+    }); */
   };
   return (
     <>
