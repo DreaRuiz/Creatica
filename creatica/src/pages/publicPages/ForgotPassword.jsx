@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useRef } from "react";
 import comofunciona from "../../assets/comofunciona.png";
-
 import { Link } from "react-router-dom";
-import { useAuth } from "../../Context/AuthContext";
+import { AuthContext } from "../../Context/AuthContext";
 
-// EL MATEIX FIREBASE ENVIA EL MAIL DE REESTABLIR PASS AL emailRef introduit (validant que correspon a un user)
+// FIREBASE ENVIA EL MAIL DE REESTABLIRPASS (al emailRef introduit validant que correspon a un user)
 const ForgotPassword = () => {
   const emailRef = useRef();
 
-  const { resetPassword } = useAuth();
-  const [error, setError] = useState("");
+  const { resetPassword, error, setError } = useContext(AuthContext);
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {

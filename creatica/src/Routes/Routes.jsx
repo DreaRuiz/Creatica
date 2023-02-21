@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./PrivateRoutes/";
 
 // Context
-import AuthProvider from "../Context/AuthContext";
+import { AuthProvider } from "../Context/AuthContext";
 
 // Rutes públiques
 import Welcome from "../pages/publicPages/Welcome";

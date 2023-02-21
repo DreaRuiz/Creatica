@@ -1,31 +1,86 @@
-import React, { useState, useEffect, useContext } from "react";
-import { auth } from "../config/firebase";
+import { createContext, useEffect, useState } from "react";
+
+// IMPORTS DE FIREBASE
 import {
-  onAuthStateChanged,
   createUserWithEmailAndPassword,
-  sendPasswordResetEmail,
+  updateProfile,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
+import { setDoc, doc } from "firebase/firestore";
+import { auth, db } from "../config/firebase";
 
-// TODO: Fer que es mantingui logejat l'user
-export const AuthContext = React.createContext();
-// CONTEXT PER LA GESTIÓ D'USERS
-export function useAuth() {
-  return useContext(AuthContext);
-}
-// REGISTRE I RESETPASS
-const AuthProvider = ({ children }) => {
+// CREO EL CONTEXT I EL PROVIDER
+export const AuthContext = createContext();
+export const AuthProvider = ({ children }) => {
+  // ESTATS
+  const [firstName, setFirstName] = useState(" ");
+  const [lastName, setLastName] = useState(" ");
+  const [email, setEmail] = useState(" ");
+  const [password, setPassword] = useState(" ");
   const [currentUser, setCurrentUser] = useState();
+  const [error, setError] = useState("");
 
-  function signup(email, password) {
-    createUserWithEmailAndPassword(auth, email, password);
+  // REGISTER
+  const signup = async (email, password) => {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      console.log("usercredential", userCredential);
+      updateProfile(auth.currentUser, {
+        displayName: firstName,
+      });
+      const user = userCredential.user;
+      console.log("user", user);
+      sessionStorage.setItem("Auth Token", user.stsTokenManager.refreshToken); //
+      await setDoc(doc(db, "users", user.uid), {
+        email,
+        firstName,
+        taskList: [],
+        //* Aquí posar les coses que s'han de guardar a la base de dades (de cada user)
+      });
+      return true;
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-    //aquí crear la colecció USERS
-  }
+  // LOGIN
+  const login = async (email, password) => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      sessionStorage.setItem("Auth Token", user.stsTokenManager.refreshToken);
+      return true;
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  function resetPassword(email) {
+  // RESETPASSWORD
+  const resetPassword = async (email) => {
     return sendPasswordResetEmail(auth, email);
-  }
+  };
 
+  // SIGNOUT
+  const logOut = async () => {
+    try {
+      await signOut(auth);
+      navigate("/Welcome"); // Quan tanquis sessió ves a Welcome
+      return true;
+    } catch (error) {
+      return false;
+    }
+  };
+  // COMPROVA SI L'USER ESTÀ LOGUEJAT
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -37,21 +92,30 @@ const AuthProvider = ({ children }) => {
     return () => {
       unsubscribe();
     };
-  }, []);
+  }, [currentUser]);
 
   return (
     <AuthContext.Provider
       value={{
         currentUser,
-        auth,
+        setCurrentUser,
+        email,
+        setEmail,
+        firstName,
+        setFirstName,
+        lastName,
+        setLastName,
+        password,
+        setPassword,
+        error,
+        setError,
         signup,
+        login,
         resetPassword,
+        logOut,
       }}
     >
       {children}
     </AuthContext.Provider>
   );
 };
-
-export default AuthProvider;
-

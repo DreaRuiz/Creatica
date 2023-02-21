@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../../components/Footer";
 import { HeaderUser } from "../../components/HeaderUser";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function UserMenu() {
   return (

@@ -1,48 +1,46 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import Footer from "../../components/Footer";
-import register from "../../assets/register.png"
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
-// Components de Firebase
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "../../config/firebase";
-import { ref, set, onValue } from "firebase/database";
+import Footer from "../../components/Footer";
+import register from "../../assets/register.png";
+
 function Register() {
   const navigate = useNavigate();
-
-  // ESTATS
-  const [firstName, setFirstName] = useState(" ");
-  const [lastName, setLastName] = useState(" ");
-  const [email, setEmail] = useState(" ");
-  const [password, setPassword] = useState(" ");
+  const {
+    email,
+    setEmail,
+    firstName,
+    setFirstName,
+    lastName,
+    setLastName,
+    password,
+    setPassword,
+    error,
+    setError,
+    signup,
+  } = useContext(AuthContext);
 
   // CREACIÓ D'UN NOU USER & VALIDACIÓ / ERROR
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        set(ref(db, "users/" + userCredential.user.uid), {
-          firstName: firstName,
-          lastName: lastName,
-          email: email,
-        });
-      })
-      .catch((error) => {
-        alert(error, "Enter a valid data");
-      });
-    // CREA LA RUTA
-    navigate("/");
+    await signup(email, password);
 
-    //IMPORTA USER I MOSTRA PER CONSOLA
-/*     let data = ref(db, "users/");
-    onValue(data, (snapshot) => {
-      data = snapshot.val();
-    }); */
+    navigate("/welcome");
+
+    if (error) {
+      console.log(error);
+    }
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
   };
   return (
     <>
       <div className="register">
-      <h1>¡HOLA!</h1>
+        <h1>¡HOLA!</h1>
         <form className="registerForm">
           <div>
             <input
@@ -75,15 +73,13 @@ function Register() {
             REGÍSTRATE
           </button>
           <div>
-          <Link className="subtextLogin" to="/login/">
-            {" "}
-            O INICIA SESIÓN{" "}
-          </Link>
+            <Link className="subtextLogin" to="/login/">
+              {" "}
+              O INICIA SESIÓN{" "}
+            </Link>
           </div>
         </form>
-        
       </div>
-
     </>
   );
 }

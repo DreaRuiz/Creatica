@@ -1,46 +1,39 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import login from "../../assets/login.png"
-
-// COMPONENTS DE FIREBASE
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../config/firebase";
+import loginImg from "../../assets/login.png";
+import { AuthContext } from "../../Context/AuthContext";
 
 const Login = () => {
   const navigate = useNavigate();
-  // ESTATS
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { login, email, setEmail, password, setPassword, error, setError } =
+    useContext(AuthContext);
 
   // AUTENTIFICACIÓ / ERROR AL LOGIN
-  const onLogin = (e) => {
+  const onLogin = async (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        navigate("/UserMenu");
-        sessionStorage.setItem(
-          "Auth Token",
-          userCredential._tokenResponse.refreshToken
-        );
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert("Invalid email or password");
-      });
-  };
+    await login(email, password);
+    if (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert("Invalid email or password");
+    }
 
+    console.log(error);
+    setEmail("");
+    setPassword("");
+
+    navigate("/UserMenu");
+  };
   return (
     <>
       <div className="loginWindow">
         <h1>¡HOLA!</h1>
         <div>
-<img className="imageLogin" src={login}></img>
+          <img className="imageLogin" src={loginImg}></img>
         </div>
 
-        <form >
-          <div >
+        <form>
+          <div>
             <input
               type="email"
               placeholder="Introduce tu email"
@@ -57,10 +50,10 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <div>
-            <Link className="forgotPass" type="link" to="/ForgotPassword">
-              {" "}
-              ¿Has olvidado tu contraseña?{" "}
-            </Link>
+              <Link className="forgotPass" type="link" to="/ForgotPassword">
+                {" "}
+                ¿Has olvidado tu contraseña?{" "}
+              </Link>
             </div>
           </div>
           <button className="login" type="submit" onClick={onLogin}>
