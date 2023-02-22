@@ -5,10 +5,15 @@ import { AuthContext } from "../Context/AuthContext";
 
 export const TaskContext = createContext();
 export function TaskContextProvider(props) {
-  const { currentUser } = useContext(AuthContext);
-
   // ESTAT DE LES TASQUES
   const [tasks, setTasks] = useState([]);
+
+  const { currentUser } = useContext(AuthContext);
+
+  // GUARDAR A BASE DE DADES QUAN CANVIA LA TASCA
+  useEffect(() => {
+    addTaskList();
+  }, [tasks]);
 
   // CREAR TASCA
   function createTask(task) {

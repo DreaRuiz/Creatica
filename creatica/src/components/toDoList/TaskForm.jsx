@@ -17,6 +17,7 @@ function TaskForm() {
     setTitle("");
     setPhase("");
     setDescription("");
+
   };
 
   return (
