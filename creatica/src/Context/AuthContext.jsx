@@ -7,6 +7,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
+  sendPasswordResetEmail
 } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { auth, db } from "../config/firebase";
@@ -21,6 +22,7 @@ export const AuthProvider = ({ children }) => {
   const [password, setPassword] = useState(" ");
   const [currentUser, setCurrentUser] = useState();
   const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
 
   // REGISTER
   const signup = async (email, password) => {
@@ -109,6 +111,8 @@ export const AuthProvider = ({ children }) => {
         setPassword,
         error,
         setError,
+        message,
+        setMessage,
         signup,
         login,
         resetPassword,

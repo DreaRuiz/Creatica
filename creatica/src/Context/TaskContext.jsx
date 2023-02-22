@@ -1,13 +1,16 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+import { arrayUnion, doc, updateDoc } from "firebase/firestore";
+import { db } from "../config/firebase";
+import { AuthContext } from "../Context/AuthContext";
 
-// TODO: Fer que la task list es guardi a firebase o a localstorage
 export const TaskContext = createContext();
 export function TaskContextProvider(props) {
+  const { currentUser } = useContext(AuthContext);
+
   // ESTAT DE LES TASQUES
   const [tasks, setTasks] = useState([]);
 
-
-  // FUNCTIÓ PER CREAR TASCA
+  // CREAR TASCA
   function createTask(task) {
     setTasks([
       ...tasks,
@@ -19,17 +22,31 @@ export function TaskContextProvider(props) {
     ]);
   }
 
-  // FUNCTIÓ PER ELIMINAR TASCA
+  // ELIMINAR TASCA
   function deleteTask(taskId) {
     setTasks(tasks.filter((task) => task.id !== taskId));
   }
 
-  // ACTUALITZADOR DE L'ESTAT
+  // ACTUALITZAR L'ESTAT DEL LLISTAT DE TASQUES
   useEffect(() => {
     setTasks(tasks);
   }, []);
-console.log("tasks", tasks)
-  // TASKCONTEXT i per tant CREATECONTENT retorna (array task, funció createTask i funció deleteTask)
+  console.log("tasks al TaskContext", tasks);
+
+  // PUJAR A LA BASE DE DADES LA TASKLIST DE L'USER
+  const addTaskList = async () => {
+    if (currentUser !== null) {
+      const userTaskList = doc(db, "users", `${currentUser.uid}`);
+      setTasks(tasks);
+
+      await updateDoc(userTaskList, {
+        userTaskList: arrayUnion({
+          tasks,
+        }),
+      });
+    }
+  };
+
   return (
     <TaskContext.Provider
       value={{
