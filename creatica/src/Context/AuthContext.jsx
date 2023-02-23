@@ -32,22 +32,20 @@ export const AuthProvider = ({ children }) => {
         email,
         password
       );
-      console.log("usercredential", userCredential);
       updateProfile(auth.currentUser, {
         displayName: firstName,
       });
       const user = userCredential.user;
-      console.log("user", user);
-      sessionStorage.setItem("Auth Token", user.stsTokenManager.refreshToken); //
+      sessionStorage.setItem("Auth Token", user.stsTokenManager.refreshToken);
       await setDoc(doc(db, "users", user.uid), {
         email,
         firstName,
-        taskList: [],
+        userTaskList: [],
         //* Aquí posar les coses que s'han de guardar a la base de dades (de cada user)
       });
+      navigate("/userMenu")
       return true;
     } catch (error) {
-      console.log(error.message);
     }
   };
 
@@ -65,6 +63,7 @@ export const AuthProvider = ({ children }) => {
     } catch (error) {
       console.log(error.message);
     }
+    navigate("/UserMenu");
   };
 
   // RESETPASSWORD
