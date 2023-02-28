@@ -9,15 +9,15 @@ function TaskList() {
     return <h4>No hay tareas pendientes</h4>;
   }
 
-  return (
-    <div>
-    <div className="taskListStyle">
-      {tasks.map((task, index) => (
-        <TaskCard key={index} task={task} />
-      ))}
-    </div>
-    </div>
-  );
-}
+    return (
+      <div>
+      <div className="taskListStyle">
+        {tasks.map((task, index) => (
+          <TaskCard key={index} task={task} />
+        ))}
+      </div>
+      </div>
+    );
+  }
 
 export default TaskList;

@@ -13,6 +13,7 @@ import { setDoc, doc } from "firebase/firestore";
 import { auth, db } from "../config/firebase";
 
 // CREO EL CONTEXT I EL PROVIDER
+
 export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   // ESTATS
@@ -24,6 +25,7 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
 
+ 
   // REGISTER
   const signup = async (email, password) => {
     try {
@@ -43,7 +45,6 @@ export const AuthProvider = ({ children }) => {
         userTaskList: [],
         //* Aquí posar les coses que s'han de guardar a la base de dades (de cada user)
       });
-      navigate("/userMenu")
       return true;
     } catch (error) {
     }
@@ -59,11 +60,11 @@ export const AuthProvider = ({ children }) => {
       );
       const user = userCredential.user;
       sessionStorage.setItem("Auth Token", user.stsTokenManager.refreshToken);
+
       return true;
     } catch (error) {
       console.log(error.message);
     }
-    navigate("/UserMenu");
   };
 
   // RESETPASSWORD
@@ -75,7 +76,7 @@ export const AuthProvider = ({ children }) => {
   const logOut = async () => {
     try {
       await signOut(auth);
-      navigate("/Welcome"); // Quan tanquis sessió ves a Welcome
+     /*  navigate('/Welcome'); // Quan tanquis sessió ves a Welcome */
       return true;
     } catch (error) {
       return false;

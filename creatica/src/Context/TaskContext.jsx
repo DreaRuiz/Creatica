@@ -1,19 +1,48 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { arrayUnion, doc, setDoc, onSnapshot, updateDoc } from "firebase/firestore";
+import {
+  arrayUnion,
+  doc,
+  setDoc,
+  onSnapshot,
+  updateDoc,
+  Firestore,
+} from "firebase/firestore";
 import { db } from "../config/firebase";
 import { AuthContext } from "../Context/AuthContext";
+import { async } from "@firebase/util";
+
+
 
 export const TaskContext = createContext();
 export function TaskContextProvider(props) {
   // ESTAT DE LES TASQUES
   const [tasks, setTasks] = useState([]);
-
+  
+  // PORTA CURRENTUSER I USERTASKLIST DEL CONTEXT
   const { currentUser } = useContext(AuthContext);
 
-  // GUARDAR A BASE DE DADES QUAN CANVIA LA TASCA
+  // GUARDAR A BASE DE DADES QUAN CANVIA LA TASCA I MOSTRAR-LA
   useEffect(() => {
     setTaskList();
+    loadData()
+    console.log(tasks, "TASKS AL PRINCIPI")
   }, [tasks]);
+
+// MOSTRAR LA BASE DE DADES NOMÉS CARREGAR LA PÀGINA
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  // MOSTRAR LA LLISTA (QUE VE DE FIREBASE)
+  async function loadData() {
+    try {
+      const userData = await db.collection("users").doc(currentUser.uid).get();
+      setTasks(userData.data().userTaskList);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 
   // CREAR TASCA
   function createTask(task) {
@@ -32,47 +61,14 @@ export function TaskContextProvider(props) {
   }
 
   // PUJA TASKLIST DE L'USER A FIRESTORE
-
   const setTaskList = async () => {
     if (currentUser !== null) {
       const userList = doc(db, "users", `${currentUser.uid}`);
       await updateDoc(userList, {
-        userTaskList: tasks
+        userTaskList: tasks,
       });
-      console.log("userTaskList", userTaskList);
-    } else {
-      alert('Inicia sesión para guardar')
     }
   };
-
-
-
-
-
-// MOSTRAR LA LLISTA (QUE VE DE FIREBASE)
-
-
-/*
-exemple:
-React.useEffect(() => {
-
-  const obtenerDatos = async () => {
-      const db = firebase.firestore()
-      try {
-          const data = await db.collection('tareas').get()
-          const arrayData = data.docs.map(doc => ({id: doc.id, ...doc.data()}))
-          console.log(arrayData)      
-      } catch (error) {
-          console.log(error)
-      }
-  }
-  obtenerDatos()
-
-}, [])
- */
-
-
-
 
   // ELIMINAR TASCA
   function deleteTask(taskId) {

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { TaskContext } from "../../Context/TaskContext";
 
-// QUÈ FA? Dòna format a la tasca
+// DONA FORMAT A LA TASCA
 function TaskCard({ task }) {
   const { deleteTask } = useContext(TaskContext);
 

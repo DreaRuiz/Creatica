@@ -17,8 +17,8 @@ const Login = () => {
       const errorMessage = error.message;
       alert("Invalid email or password");
     }
-
     console.log(error);
+    
     setEmail("");
     setPassword("");
 
