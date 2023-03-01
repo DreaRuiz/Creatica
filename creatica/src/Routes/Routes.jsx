@@ -10,8 +10,6 @@ import Welcome from "../pages/publicPages/Welcome";
 import Login from "../pages/publicPages/Login";
 import ErrorPage from "../pages/publicPages/ErrorPage";
 import Register from "../pages/publicPages/Register";
-import Description from "../pages/publicPages/Description";
-import About from "../pages/publicPages/About";
 import ForgotPassword from "../pages/publicPages/ForgotPassword";
 
 // Rutes privades
@@ -22,6 +20,17 @@ import Phases from "../pages/privatePages/Phases/Phases";
 import Evolution from "../pages/privatePages/Evolution";
 import Tracking from "../pages/privatePages/trackingPages/Tracking";
 import Recommendations from "../pages/privatePages/Recommendations";
+// Tracking routes
+import TrackingCreativity from "../pages/privatePages/trackingPages/TrackingCreativity";
+import TrackingFocus from "../pages/privatePages/trackingPages/TrackingFocus";
+import TrackingProductiva from "../pages/privatePages/trackingPages/TrackingProductiva";
+import TrackingSociable from "../pages/privatePages/trackingPages/TrackingSociable";
+// Phases
+import PhasesIdeacion from "../pages/privatePages/Phases/PhasesIdeacion"
+import PhasesCreacion from "../pages/privatePages/Phases/PhasesCreacion"
+import PhasesPrototipado from "../pages/privatePages/Phases/PhasesPrototipado"
+import PhasesTesteo from "../pages/privatePages/Phases/PhasesTesteo"
+import PhasesFinal from "../pages/privatePages/Phases/PhasesFinal"
 
 const Router = () => (
   <AuthProvider>
@@ -30,13 +39,10 @@ const Router = () => (
         {/* RUTES PÚBLIQUES */}
         <Route index element={<Welcome />}></Route>
         <Route path="/welcome" element={<Welcome />}></Route>
-        <Route path="/description/" element={<Description />} />
-        <Route path="/about/" element={<About />} />
         <Route path="/login/" element={<Login />} />
         <Route path="/register/" element={<Register />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="*" element={<ErrorPage />} />
-
         {/* RUTES PRIVADES */}
         <Route
           path="/usermenu/"
@@ -46,7 +52,6 @@ const Router = () => (
             </PrivateRoute>
           }
         />
-
         <Route
           path="/todolist/"
           element={
@@ -55,7 +60,6 @@ const Router = () => (
             </PrivateRoute>
           }
         />
-
         <Route
           path="/calendar/"
           element={
@@ -64,7 +68,6 @@ const Router = () => (
             </PrivateRoute>
           }
         />
-
         <Route
           path="/phases/"
           element={
@@ -73,7 +76,6 @@ const Router = () => (
             </PrivateRoute>
           }
         />
-
         <Route
           path="/evolution/"
           element={
@@ -82,7 +84,6 @@ const Router = () => (
             </PrivateRoute>
           }
         />
-
         <Route
           path="/tracking/"
           element={
@@ -91,12 +92,86 @@ const Router = () => (
             </PrivateRoute>
           }
         />
-
         <Route
           path="/recommendations/"
           element={
             <PrivateRoute>
               <Recommendations />
+            </PrivateRoute>
+          }
+        />
+        {/*         TRACKING ROUTES */}
+        <Route
+          path="/TrackingCreativity/"
+          element={
+            <PrivateRoute>
+              <TrackingCreativity />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/TrackingFocus/"
+          element={
+            <PrivateRoute>
+              <TrackingFocus />
+            </PrivateRoute>
+          }
+        />
+        +{" "}
+        <Route
+          path="/TrackingProductiva/"
+          element={
+            <PrivateRoute>
+              <TrackingProductiva />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/TrackingSociable/"
+          element={
+            <PrivateRoute>
+              <TrackingSociable />
+            </PrivateRoute>
+          }
+        />
+        {/*         PHASES ROUTES */}
+        <Route
+          path="/PhasesIdeacion/"
+          element={
+            <PrivateRoute>
+              <PhasesIdeacion />
+            </PrivateRoute>
+          }
+        />
+            <Route
+          path="/PhasesCreacion/"
+          element={
+            <PrivateRoute>
+              <PhasesCreacion />
+            </PrivateRoute>
+          }
+        />
+            <Route
+          path="/PhasesPrototipado/"
+          element={
+            <PrivateRoute>
+              <PhasesPrototipado />
+            </PrivateRoute>
+          }
+        />
+            <Route
+          path="/PhasesTesteo/"
+          element={
+            <PrivateRoute>
+              <PhasesTesteo />
+            </PrivateRoute>
+          }
+        />
+              <Route
+          path="/PhasesFinal/"
+          element={
+            <PrivateRoute>
+              <PhasesFinal />
             </PrivateRoute>
           }
         />

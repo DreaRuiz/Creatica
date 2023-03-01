@@ -1,7 +1,8 @@
 import React from "react";
 import { HeaderUser } from "../../../components/Headeruser";
-import fases1img from "../../../assets/fases1img.png"
+import fases1img from "../../../assets/fases1img.png";
 import fasesDef2 from "../../../assets/fasesDef2.png";
+import { Link } from "react-router-dom";
 
 function Phases() {
   return (
@@ -25,16 +26,23 @@ function Phases() {
         <img src={fasesDef2}></img>
         <h2>MATERIAL</h2>
         <p>
-        Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
+          Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
         <button className="login">DESCARGAR</button>
         <p>
-        Es importante que antes de pasar a la siguiente fase tengas definidos los objetivos de esta.
+          Es importante que antes de pasar a la siguiente fase tengas definidos
+          los objetivos de esta.
         </p>
-        <button className="login">FASE COMPLETADA</button>
+        <Link type="link" to="/PhasesPrototipado/">
+          <button className="login">FASE COMPLETADA</button>
+        </Link>
       </div>
-      <button> anterior </button>
-      <button> siguiente </button>
+      <Link type="link" to="/PhasesIdeacion/">
+        <button> anterior </button>
+      </Link>
+      <Link type="link" to="/PhasesPrototipado/">
+        <button> siguiente </button>
+      </Link>
     </>
   );
 }

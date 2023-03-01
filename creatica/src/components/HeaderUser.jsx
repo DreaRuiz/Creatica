@@ -15,7 +15,7 @@ export const HeaderUser = () => {
         <Link to="/">HOME </Link>
       </div>
       <div>
-     <Link onClick={handleLogOut}>Cerrar sesión</Link>
+     <Link to="/Welcome" onClick={handleLogOut}>Cerrar sesión</Link>
       </div>
       <div>
         <Link to="/UserMenu">USER MENU</Link>

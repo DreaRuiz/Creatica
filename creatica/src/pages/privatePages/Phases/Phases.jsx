@@ -2,6 +2,7 @@ import React from "react";
 import { HeaderUser } from "../../../components/Headeruser";
 import fases1img from "../../../assets/fases1img.png"
 import fasesDef2 from "../../../assets/fasesDef2.png";
+import { Link } from "react-router-dom";
 
 function Phases() {
   return (
@@ -30,10 +31,9 @@ function Phases() {
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos los objetivos de esta.
         </p>
-        <button className="login">FASE COMPLETADA</button>
+        <Link type="link" to="/PhasesIdeacion/"><button className="login">FASE COMPLETADA</button></Link>
       </div>
-      <button> anterior </button>
-      <button> siguiente </button>
+      <Link type="link" to="/PhasesIdeacion/"><button> siguiente </button></Link>
     </>
   );
 }

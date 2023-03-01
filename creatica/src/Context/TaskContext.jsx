@@ -2,14 +2,17 @@ import { createContext, useContext, useState, useEffect } from "react";
 import {
   arrayUnion,
   doc,
+  getDocs,
   setDoc,
   onSnapshot,
   updateDoc,
   Firestore,
+  collection,
+  getFirestore
 } from "firebase/firestore";
 import { db } from "../config/firebase";
 import { AuthContext } from "../Context/AuthContext";
-import { async } from "@firebase/util";
+
 
 
 

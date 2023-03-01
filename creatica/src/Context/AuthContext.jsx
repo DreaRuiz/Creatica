@@ -43,6 +43,7 @@ export const AuthProvider = ({ children }) => {
         email,
         firstName,
         userTaskList: [],
+        tracking: [],
         //* Aquí posar les coses que s'han de guardar a la base de dades (de cada user)
       });
       return true;
