@@ -2,50 +2,49 @@ import { createContext, useContext, useState, useEffect } from "react";
 import {
   arrayUnion,
   doc,
-  getDocs,
+  getDoc,
   setDoc,
   onSnapshot,
   updateDoc,
   Firestore,
   collection,
-  getFirestore
+  getFirestore,
 } from "firebase/firestore";
 import { db } from "../config/firebase";
 import { AuthContext } from "../Context/AuthContext";
-
-
-
 
 export const TaskContext = createContext();
 export function TaskContextProvider(props) {
   // ESTAT DE LES TASQUES
   const [tasks, setTasks] = useState([]);
-  
+
   // PORTA CURRENTUSER I USERTASKLIST DEL CONTEXT
   const { currentUser } = useContext(AuthContext);
 
   // GUARDAR A BASE DE DADES QUAN CANVIA LA TASCA I MOSTRAR-LA
   useEffect(() => {
     setTaskList();
-    loadData()
-    console.log(tasks, "TASKS AL PRINCIPI")
-  }, [tasks]);
+    }, [tasks]);
 
-// MOSTRAR LA BASE DE DADES NOMÉS CARREGAR LA PÀGINA
+  // MOSTRAR LA BASE DE DADES NOMÉS CARREGAR LA PÀGINA
   useEffect(() => {
     loadData();
-  }, []);
+  }, [currentUser]);
 
   // MOSTRAR LA LLISTA (QUE VE DE FIREBASE)
+
   async function loadData() {
     try {
-      const userData = await db.collection("users").doc(currentUser.uid).get();
-      setTasks(userData.data().userTaskList);
+      const userRef = doc(db, "users", currentUser.uid);
+      const userData = await getDoc(userRef);
+      if (userData.exists()) {
+        setTasks(userData.data().userTaskList);
+      } else {
+      }
     } catch (error) {
       console.log(error);
     }
   }
-
 
   // CREAR TASCA
   function createTask(task) {
@@ -65,7 +64,7 @@ export function TaskContextProvider(props) {
 
   // PUJA TASKLIST DE L'USER A FIRESTORE
   const setTaskList = async () => {
-    if (currentUser !== null) {
+    if (currentUser != null) {
       const userList = doc(db, "users", `${currentUser.uid}`);
       await updateDoc(userList, {
         userTaskList: tasks,

@@ -20,11 +20,11 @@ import Phases from "../pages/privatePages/Phases/Phases";
 import Evolution from "../pages/privatePages/Evolution";
 import Tracking from "../pages/privatePages/trackingPages/Tracking";
 import Recommendations from "../pages/privatePages/Recommendations";
-// Tracking routes
+/* // Tracking routes
 import TrackingCreativity from "../pages/privatePages/trackingPages/TrackingCreativity";
 import TrackingFocus from "../pages/privatePages/trackingPages/TrackingFocus";
 import TrackingProductiva from "../pages/privatePages/trackingPages/TrackingProductiva";
-import TrackingSociable from "../pages/privatePages/trackingPages/TrackingSociable";
+import TrackingSociable from "../pages/privatePages/trackingPages/TrackingSociable"; */
 // Phases
 import PhasesIdeacion from "../pages/privatePages/Phases/PhasesIdeacion"
 import PhasesCreacion from "../pages/privatePages/Phases/PhasesCreacion"
@@ -85,14 +85,6 @@ const Router = () => (
           }
         />
         <Route
-          path="/tracking/"
-          element={
-            <PrivateRoute>
-              <Tracking />
-            </PrivateRoute>
-          }
-        />
-        <Route
           path="/recommendations/"
           element={
             <PrivateRoute>
@@ -102,6 +94,14 @@ const Router = () => (
         />
         {/*         TRACKING ROUTES */}
         <Route
+          path="/tracking/:trackingId"
+          element={
+            <PrivateRoute>
+              <Tracking />
+            </PrivateRoute>
+          }
+        />
+        {/* <Route
           path="/TrackingCreativity/"
           element={
             <PrivateRoute>
@@ -133,7 +133,7 @@ const Router = () => (
               <TrackingSociable />
             </PrivateRoute>
           }
-        />
+        /> */}
         {/*         PHASES ROUTES */}
         <Route
           path="/PhasesIdeacion/"
