@@ -29,14 +29,14 @@ function Phases() {
         <p>
         Es importante que antes de pasar a la siguiente fase tengas definidos los objetivos de esta.
         </p>
-        <Link type="link" to="/PhasesTesteo/">
+        <Link type="link" to="/phasesTesteo/">
           <button className="login">FASE COMPLETADA</button>
         </Link>
       </div>
-      <Link type="link" to="/PhasesCreacion/">
+      <Link type="link" to="/phasesCreacion/">
         <button> anterior </button>
       </Link>
-      <Link type="link" to="/PhasesTesteo/">
+      <Link type="link" to="/phasesTesteo/">
         <button> siguiente </button>
       </Link>
     </>

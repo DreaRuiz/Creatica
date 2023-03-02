@@ -1,43 +1,32 @@
 export const userRecom = {
-    motivation: {
-        positiveTitle: "motivada",
-        positiveText: "coses de motivada",
-        negativeTitle: "noMotivada",
-        negativeText: "coses de no motivada (desmotivada)",
-    },
-    focus: {
-        positiveTitle: "ENFOCADA",
-        positiveText: "coses d'enfocada",
-        negativeTitle: "DISPERSA",
-        negativeText: "coses de no enfocada",
-    },
-    creativity: {
-        positiveTitle: "CREATIVA",
-        positiveText: "coses de creativa",
-        negativeTitle: "FALTA DE IDEAS",
-        negativeText: "coses de no creativa",
-    },
-    productivity: {
-        positiveTitle: "PRODUCTIVA",
-        positiveText: "coses d'enfocada",
-        negativeTitle: "NO PRODUCTIVA",
-        negativeText: "coses de no enfocada",
-    }
-    
-}
-
-  /* export const userRecom = [
-    
-    
-    {
-      id: "productivity",
-      productiva: "coses de productiva",
-      noProductiva: "coses de no noProductiva (distreta)",
-    },
-    {
-      id: "sociability",
-      text: "coses de sociable",
-      noSociable: "coses de no sociable (introspectiva)",
-    },
-  ];
-   */
+  motivation: {
+    positiveTitle: "MOTIVADA",
+    positiveText: "coses de motivada",
+    negativeTitle: "DESMOTIVADA",
+    negativeText: "coses de no motivada (desmotivada)",
+  },
+  focus: {
+    positiveTitle: "ENFOCADA",
+    positiveText: "coses d'enfocada",
+    negativeTitle: "DISPERSA",
+    negativeText: "coses de no enfocada",
+  },
+  creativity: {
+    positiveTitle: "CREATIVA",
+    positiveText: "coses de creativa",
+    negativeTitle: "FALTA DE IDEAS",
+    negativeText: "coses de falta d'idees",
+  },
+  productivity: {
+    positiveTitle: "PRODUCTIVA",
+    positiveText: "coses de producitiva",
+    negativeTitle: "NO PRODUCTIVA",
+    negativeText: "coses de no productiva",
+  },
+  sociable: {
+    positiveTitle: "SOCIALE",
+    positiveText: "coses de sociable",
+    negativeTitle: "INTROSPECTIVA",
+    negativeText: "coses de no sociable",
+  },
+};

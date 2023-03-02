@@ -3,15 +3,7 @@ import Footer from "../../components/Footer";
 import { HeaderUser } from "../../components/HeaderUser";
 import { Link } from "react-router-dom";
 
-/* import { AuthContext } from "../../Context/AuthContext";
-import { useContext } from 'react' */
-
-
-
-
-
 function UserMenu() {
-/*   const { currentUser } = useContext(AuthContext); */
 
   return (
     <>

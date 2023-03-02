@@ -4,17 +4,16 @@ import { Link, useParams } from "react-router-dom";
 import { userRecom } from "../../../data/userRecommendations";
 
 function tracking() {
-
   const trackingId = useParams().trackingId;
   const currentTrack = userRecom[trackingId]; // key del current track
   const keys = Object.keys(userRecom); // Aconsegueixo l'array de keys
   const currentIndex = keys.indexOf(trackingId); // Posició per índex dins l'array de keys
   const nextTrackingId = keys[currentIndex + 1]; // Indica quina és la posició del següent títol
 
-  let nextPage = "/tracking/" + nextTrackingId // Ruta cap a la següent pàgina
+  let nextPage = "/tracking/" + nextTrackingId; // Ruta cap a la següent pàgina
   if (nextTrackingId == null) {
     nextPage = "/recommendations"; // Quan no hi ha més pàgines (objectes al json) salta a recomanacions.
-  } 
+  }
 
   return (
     <div>
