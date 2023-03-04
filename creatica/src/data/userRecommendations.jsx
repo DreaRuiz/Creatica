@@ -24,7 +24,7 @@ export const userRecom = {
     negativeText: "coses de no productiva",
   },
   sociable: {
-    positiveTitle: "SOCIALE",
+    positiveTitle: "SOCIABLE",
     positiveText: "coses de sociable",
     negativeTitle: "INTROSPECTIVA",
     negativeText: "coses de no sociable",
