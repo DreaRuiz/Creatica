@@ -1,14 +1,9 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import {
-  arrayUnion,
   doc,
   getDoc,
-  setDoc,
-  onSnapshot,
   updateDoc,
-  Firestore,
-  collection,
-  getFirestore,
+
 } from "firebase/firestore";
 import { db } from "../config/firebase";
 import { AuthContext } from "../Context/AuthContext";
@@ -45,6 +40,7 @@ export function TaskContextProvider(props) {
       console.log(error);
     }
   }
+
 
   // CREAR TASCA
   function createTask(task) {

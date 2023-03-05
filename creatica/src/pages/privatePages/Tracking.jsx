@@ -27,12 +27,6 @@ function tracking() {
     nextPage = "/recommendations"; // Quan no hi ha més pàgines (objectes al json) salta a recomanacions.
   }
 
-  /* // GUARDAR A UN ARRAY ELS SELECCIONATS
-  const addTrack = (track) => {
-    setSelectedTracks([...selectedTracks, track]);
-  };
-  console.log("selectedTracks", selectedTracks); */
-
   // GUARDAR A UN ARRAY ELS SELECCIONATS
   const addTrack = async (track) => {
     setSelectedTracks([...selectedTracks, track]);
@@ -44,7 +38,6 @@ function tracking() {
     }
   };
 
-  console.log("selectedTracks", selectedTracks);
 
   return (
     <div>
