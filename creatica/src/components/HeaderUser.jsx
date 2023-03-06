@@ -21,8 +21,8 @@ export const HeaderUser = () => {
         <Link to="/UserMenu">USER MENU</Link>
         <Link to="/Phases">PHASES</Link>
         <Link to="/Evolution">EVOLUTION </Link>
-        <Link to="/Tracking">TRACKING </Link>
-     {/*    <Link to="/Recommendations">RECCOMENDATIONS</Link> */}
+        <Link to="/tracking/motivation">TRACKING </Link>
+        <Link to="/Recommendations">RECCOMENDATIONS</Link>
         <Link to="/ToDoList">TO DO LIST </Link>
     {/*     <Link to="/Calendar">CALENDAR </Link> */}
       </div>

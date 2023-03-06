@@ -9,7 +9,7 @@ import {
   signOut,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import { setDoc, doc } from "firebase/firestore";
+import { setDoc, doc, connectFirestoreEmulator } from "firebase/firestore";
 import { auth, db } from "../config/firebase";
 
 // CREO EL CONTEXT I EL PROVIDER
@@ -25,8 +25,6 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
 
-
- 
   // REGISTER
   const signup = async (email, password) => {
     try {
@@ -45,11 +43,11 @@ export const AuthProvider = ({ children }) => {
         firstName,
         userTaskList: [],
         userTracking: [],
+        userPhases: [],
         //* Aquí posar les coses que s'han de guardar a la base de dades (de cada user)
       });
       return true;
-    } catch (error) {
-    }
+    } catch (error) {}
   };
 
   // LOGIN
@@ -78,7 +76,7 @@ export const AuthProvider = ({ children }) => {
   const logOut = async () => {
     try {
       await signOut(auth);
-     /*  navigate('/Welcome'); // Quan tanquis sessió ves a Welcome */
+      /*  navigate('/Welcome'); // Quan tanquis sessió ves a Welcome */
       return true;
     } catch (error) {
       return false;
@@ -119,6 +117,7 @@ export const AuthProvider = ({ children }) => {
         login,
         resetPassword,
         logOut,
+ 
       }}
     >
       {children}

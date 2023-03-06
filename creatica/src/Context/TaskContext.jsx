@@ -1,17 +1,15 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import {
-  doc,
-  getDoc,
-  updateDoc,
-
-} from "firebase/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../config/firebase";
 import { AuthContext } from "../Context/AuthContext";
 
 export const TaskContext = createContext();
 export function TaskContextProvider(props) {
-  // ESTAT DE LES TASQUES
+  // ESTAT DE LES TASQUES I FASES
   const [tasks, setTasks] = useState([]);
+  const [userPhase, setUserPhase] = useState([]);
+
+  console.log("userPhase", userPhase);
 
   // PORTA CURRENTUSER I USERTASKLIST DEL CONTEXT
   const { currentUser } = useContext(AuthContext);
@@ -19,15 +17,18 @@ export function TaskContextProvider(props) {
   // GUARDAR A BASE DE DADES QUAN CANVIA LA TASCA I MOSTRAR-LA
   useEffect(() => {
     setTaskList();
-    }, [tasks]);
+  }, [tasks]);
 
   // MOSTRAR LA BASE DE DADES NOMÉS CARREGAR LA PÀGINA
   useEffect(() => {
     loadData();
   }, [currentUser]);
 
-  // MOSTRAR LA LLISTA (QUE VE DE FIREBASE)
+  useEffect(() => {
+    setPhasesList();
+  }, [userPhase]);
 
+  // MOSTRAR LA LLISTA (QUE VE DE FIREBASE)
   async function loadData() {
     try {
       const userRef = doc(db, "users", currentUser.uid);
@@ -40,7 +41,6 @@ export function TaskContextProvider(props) {
       console.log(error);
     }
   }
-
 
   // CREAR TASCA
   function createTask(task) {
@@ -73,12 +73,27 @@ export function TaskContextProvider(props) {
     setTasks(tasks.filter((task) => task.id !== taskId));
   }
 
+  // GUARDAR FASES DEL PROJECTE COMPLETADES
+  function savePhase(phase) {
+    setUserPhase([...userPhase, phase]);
+  }
+  const setPhasesList = async () => {
+    if (currentUser != null) {
+      const userPhaseList = doc(db, "users", `${currentUser.uid}`);
+      await updateDoc(userPhaseList, {
+        userPhases: userPhase,
+      });
+    }
+  };
+  console.log("userPhase", userPhase);
+
   return (
     <TaskContext.Provider
       value={{
         tasks,
         createTask,
         deleteTask,
+        savePhase,
       }}
     >
       {props.children}

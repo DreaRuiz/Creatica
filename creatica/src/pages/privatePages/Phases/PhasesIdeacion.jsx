@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+
 import { HeaderUser } from "../../../components/Headeruser";
 /* import faseIdea from "../../../assets/phaseIdea.png"
 import faseIdea2 from "../../../assets/fasesIdea2.png"; */
 import { Link } from "react-router-dom";
+import { TaskContext } from '../../../Context/TaskContext'
 
 function Phases() {
+  const { savePhase } = useContext(TaskContext);
+  const phase = "ideacion"
   return (
     <>
       <HeaderUser />
@@ -38,7 +42,7 @@ function Phases() {
           los objetivos de esta.
         </p>
         <Link type="link" to="/phasesCreacion/">
-          <button className="login">FASE COMPLETADA</button>
+          <button onClick={() => savePhase(phase)} className="login">FASE COMPLETADA</button>
         </Link>
       </div>
       <Link type="link" to="/phases/">

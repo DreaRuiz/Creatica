@@ -7,9 +7,6 @@ import { AuthContext } from "../../Context/AuthContext";
 import { updateDoc, doc } from "firebase/firestore";
 import { db } from "../../config/firebase";
 
-
-
-
 function tracking() {
   // PORTA CURRENTUSER DEL CONTEXT
   const { currentUser } = useContext(AuthContext);
@@ -37,7 +34,6 @@ function tracking() {
       });
     }
   };
-
 
   return (
     <div>

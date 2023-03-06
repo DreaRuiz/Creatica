@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { HeaderUser } from "../../../components/Headeruser";
-import fases1img from "../../../assets/fases1img.png"
+import fases1img from "../../../assets/fases1img.png";
 import fasesDef2 from "../../../assets/fasesDef2.png";
 import { Link } from "react-router-dom";
+import { TaskContext } from '../../../Context/TaskContext'
 
 function Phases() {
+  const { savePhase } = useContext(TaskContext);
+  const phase = "definicion"
   return (
     <>
       <HeaderUser />
       <div className="welcome">
         <h2>FASE: DEFINICIÓN</h2>
         <p>
-          En esta fase, debemos recopilar y cribar la información para ir conformando el marco de nuestro proyecto.Buscar referentes y quedarnos con lo que realmente aporta valor. Identificaremos problemas cuyas soluciones serán clave para la obtención de un resultado innovador.
-
-
+          En esta fase, debemos recopilar y cribar la información para ir
+          conformando el marco de nuestro proyecto.Buscar referentes y quedarnos
+          con lo que realmente aporta valor. Identificaremos problemas cuyas
+          soluciones serán clave para la obtención de un resultado innovador.
         </p>
         <img src={fases1img}></img>
         <h2>OBJETIVOS:</h2>
@@ -29,11 +33,18 @@ function Phases() {
         </p>
         <button className="login">DESCARGAR</button>
         <p>
-          Es importante que antes de pasar a la siguiente fase tengas definidos los objetivos de esta.
+          Es importante que antes de pasar a la siguiente fase tengas definidos
+          los objetivos de esta.
         </p>
-        <Link type="link" to="/phasesIdeacion/"><button className="login">FASE COMPLETADA</button></Link>
+        <Link type="link" to="/phasesIdeacion/">
+          <button onClick={() => savePhase(phase)} className="login">
+            FASE COMPLETADA
+          </button>
+        </Link>
       </div>
-      <Link type="link" to="/phasesIdeacion/"><button> siguiente </button></Link>
+      <Link type="link" to="/phasesIdeacion/">
+        <button> siguiente </button>
+      </Link>
     </>
   );
 }

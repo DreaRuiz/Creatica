@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { HeaderUser } from "../../../components/Headeruser";
 /* import faseProto from "../../../assets/faseProto.png"
 import faseProto2 from "../../../assets/faseProto2.png"; */
 import { Link } from "react-router-dom";
+import { TaskContext } from '../../../Context/TaskContext'
 
 function Phases() {
+  const { savePhase } = useContext(TaskContext);
+  const phase = "prototipado"
   return (
     <>
       <HeaderUser />
@@ -30,7 +33,7 @@ function Phases() {
         Es importante que antes de pasar a la siguiente fase tengas definidos los objetivos de esta.
         </p>
         <Link type="link" to="/phasesTesteo/">
-          <button className="login">FASE COMPLETADA</button>
+          <button onClick={() => savePhase(phase)} className="login">FASE COMPLETADA</button>
         </Link>
       </div>
       <Link type="link" to="/phasesCreacion/">
