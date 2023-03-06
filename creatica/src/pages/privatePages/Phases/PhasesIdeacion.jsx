@@ -8,7 +8,7 @@ import { TaskContext } from '../../../Context/TaskContext'
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
-  const phase = "ideacion"
+  const phase = {ideacion: true}
   return (
     <>
       <HeaderUser />

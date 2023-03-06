@@ -7,13 +7,18 @@ export const TaskContext = createContext();
 export function TaskContextProvider(props) {
   // ESTAT DE LES TASQUES I FASES
   const [tasks, setTasks] = useState([]);
-  const [userPhase, setUserPhase] = useState([]);
-
-  console.log("userPhase", userPhase);
+  const [userPhase, setUserPhase] = useState({
+    definicion: false,
+    ideacion: false,
+    creacion: false,
+    prototipado: false,
+    testeo: false,
+  });
 
   // PORTA CURRENTUSER I USERTASKLIST DEL CONTEXT
   const { currentUser } = useContext(AuthContext);
 
+  /* // TO DO LIST // */
   // GUARDAR A BASE DE DADES QUAN CANVIA LA TASCA I MOSTRAR-LA
   useEffect(() => {
     setTaskList();
@@ -21,7 +26,8 @@ export function TaskContextProvider(props) {
 
   // MOSTRAR LA BASE DE DADES NOMÉS CARREGAR LA PÀGINA
   useEffect(() => {
-    loadData();
+    loadData()
+    loadPhases();
   }, [currentUser]);
 
   useEffect(() => {
@@ -72,11 +78,14 @@ export function TaskContextProvider(props) {
   function deleteTask(taskId) {
     setTasks(tasks.filter((task) => task.id !== taskId));
   }
-
+  /* // FASES // */
   // GUARDAR FASES DEL PROJECTE COMPLETADES
-  function savePhase(phase) {
-    setUserPhase([...userPhase, phase]);
+  function savePhase(phases) {
+    const updatedPhase = { ...userPhase, ...phases };
+    setUserPhase(updatedPhase);
   }
+
+  // PUJAR A FIREBASE LES FASES COMPLETADES
   const setPhasesList = async () => {
     if (currentUser != null) {
       const userPhaseList = doc(db, "users", `${currentUser.uid}`);
@@ -85,7 +94,20 @@ export function TaskContextProvider(props) {
       });
     }
   };
-  console.log("userPhase", userPhase);
+  // BAIXAR ESTAT DE LES FASES DE FIRESTORE
+  async function loadPhases() {
+    try {
+      const userRef = doc(db, "users", currentUser.uid);
+      const userData = await getDoc(userRef);
+      if (userData.exists()) {
+        setUserPhase(userData.data().userPhases);
+      } else {
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 
   return (
     <TaskContext.Provider
@@ -94,6 +116,7 @@ export function TaskContextProvider(props) {
         createTask,
         deleteTask,
         savePhase,
+        userPhase,
       }}
     >
       {props.children}
