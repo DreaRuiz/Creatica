@@ -26,7 +26,7 @@ export function TaskContextProvider(props) {
 
   // MOSTRAR LA BASE DE DADES NOMÉS CARREGAR LA PÀGINA
   useEffect(() => {
-    loadData()
+    loadData();
     loadPhases();
   }, [currentUser]);
 
@@ -59,6 +59,8 @@ export function TaskContextProvider(props) {
         phase: task.phase,
         title: task.title,
         description: task.description,
+        time: task.time,
+        relevance: task.relevance,
         id: currentId,
       },
     ]);
@@ -107,7 +109,6 @@ export function TaskContextProvider(props) {
       console.log(error);
     }
   }
-
 
   return (
     <TaskContext.Provider
