@@ -5,22 +5,44 @@ import { TaskContext } from "../../Context/TaskContext";
 function TaskCard({ task }) {
   const { deleteTask } = useContext(TaskContext);
 
+  function getBadgeColor(relevance) {
+    if (relevance === "urgente") {
+      return "badge-error";
+    } else if (relevance === "importante") {
+      return "badge-warning";
+    } else if (relevance === "futura") {
+      return "badge-primary";
+    } else {
+      return "badge-success";
+    }
+  }
+
   return (
-    <div className="todolistCard">
-      <p>Título de la tarea: {task.title}</p>
-      <p>
-        Fase: <b>{task.phase}</b>
-      </p>
-      <p>Descripción: {task.description}</p>
+    <div className="card bg-base-100 shadow-xl m-3">
+      <div>
+        <div className={`badge ${getBadgeColor(task.relevance)}`}>
+          {task.relevance}
+        </div>
+        <p className="card-actions justify-end item-aling-top">{task.time}</p>
+        <h2 className="card-title mt-3">{task.title}</h2>
+        <p className="card-actions justify-start"> {task.description}</p>
+       
 
-      <p>Duración: {task.time}</p>
-      <p>Relevancia: {task.relevance}</p>
-
-      <button className="delete" onClick={() => deleteTask(task.id)}>
-        Esborrar
-      </button>
+        <p className="card-actions justify-start">
+          Fase: {task.phase}
+        </p>
+      </div>
+      <div className="justify-end">
+        <button
+          className="btn btn-outline btn-error rounded-full m-3"
+          onClick={() => deleteTask(task.id)}
+        >
+          Eliminar
+        </button>
+      </div>
     </div>
   );
 }
 
 export default TaskCard;
+

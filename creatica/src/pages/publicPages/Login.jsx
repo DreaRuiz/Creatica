@@ -35,6 +35,7 @@ const Login = () => {
         <form>
           <div>
             <input
+            className="input input-bordered input-primary w-full max-w-xs"
               type="email"
               placeholder="Introduce tu email"
               autoComplete="on"
@@ -42,6 +43,7 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
+            className="input input-bordered input-primary w-full max-w-xs"
               type="password"
               placeholder="Contraseña"
               minLength="6"

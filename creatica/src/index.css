@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap');
 
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -134,7 +134,7 @@ textarea {
   border-radius: 21px;
   border: none;
   text-justify: center;
-}
+} */
 
 /* button {
   width: 155px;
@@ -164,21 +164,21 @@ button:focus-visible {
 } */
 
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
   a:hover {
     color: #a9a9a9;
-  }
+  } */
 /*   button {
     background-color: #f9f9f9;
   } */
-}
+/* } */
 
 /* LOGIN */
-.loginWindow {
+/* .loginWindow {
   margin-top: -150px;
 }
 .imageLogin {
@@ -221,10 +221,10 @@ margin-top: -20px;
   font-weight: 400;
   font-size: 10px;
   color: #7e7e7e;
-}
+} */
 
 /* REGISTER */
-.register{
+/* .register{
   background-image: url("./assets//register.png");
   background-repeat: no-repeat;
  margin-top: -170px;
@@ -232,9 +232,9 @@ margin-top: -20px;
 .registerForm{
  margin-top: 200px;
 }
-
+ */
 /* WELCOME */
-.welcome {
+/* .welcome {
   align-items: center;
   justify-content: center;
   display: block;
@@ -242,10 +242,10 @@ margin-top: -20px;
 .text {
   margin-left: 10%;
   margin-right: 10%;
-}
+} */
 
 /* TO DO LIST */
-.todolist{
+/* .todolist{
   flex-direction: column;
 }
 .taskListStyle {
@@ -265,10 +265,10 @@ margin-top: -20px;
   color: #474747;;
   font-family: 'Inter';
   text-align: left;
-}
+} */
 
 /* TRACKING */
-.trackButton {
+/* .trackButton {
 display: column;
 border: 2px solid #000000;
 width: 300px;
@@ -290,4 +290,4 @@ border-radius: 92px;
   background-image: url("./assets/trackFoco.png");
   background-repeat: no-repeat;
  margin-top: -170px;
-}
+} */

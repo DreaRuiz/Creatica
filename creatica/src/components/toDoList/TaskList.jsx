@@ -36,9 +36,14 @@ function TaskList() {
         {sortedTasks.map((task, index) => (
           <TaskCard key={index} task={task} />
         ))}
-        </div>
+      </div>
       {tasks.length > 1 && (
-        <button onClick={() => setShouldSort(true)}>Ordena por relevancia</button>
+        <button
+          className="btn btn-outline btn-primary rounded-full m-3"
+          onClick={() => setShouldSort(true)}
+        >
+          Ordena por relevancia
+        </button>
       )}
     </div>
   );
