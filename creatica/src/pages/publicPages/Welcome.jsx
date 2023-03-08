@@ -23,7 +23,7 @@ export function Welcome() {
           información y herramientas para poner en marcha tu idea.
         </p>
         <Link type="link" to="/UserMenu/">
-          <button className="login">EMPEZAR</button>
+          <button className="login">EMPEZAR</button>‡
         </Link>
         <h2>¿CÓMO FUNCIONA?</h2>
         <div className="text">
@@ -43,6 +43,7 @@ export function Welcome() {
             Además, podrás organizar y agendar tus tareas pendientes para
             tenerlas siempre a mano.
           </p>
+          
           <img src={sinTitulo_1}></img>
         </div>
       </div>

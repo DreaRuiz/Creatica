@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap');
 
 :root {
@@ -132,7 +136,7 @@ textarea {
   text-justify: center;
 }
 
-button {
+/* button {
   width: 155px;
   height: 51px;
   left: 182px;
@@ -157,7 +161,7 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 
 @media (prefers-color-scheme: light) {
@@ -168,9 +172,9 @@ button:focus-visible {
   a:hover {
     color: #a9a9a9;
   }
-  button {
+/*   button {
     background-color: #f9f9f9;
-  }
+  } */
 }
 
 /* LOGIN */
