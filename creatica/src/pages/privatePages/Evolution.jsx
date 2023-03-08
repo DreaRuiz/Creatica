@@ -6,14 +6,13 @@ import { HeaderUser } from "../../components/HeaderUser";
 
 function Evolution() {
   const { userPhase } = useContext(TaskContext);
-  console.log("ideacion", userPhase.ideacion);
 
   return (
     <>
       <HeaderUser />
       <PhaseStyle active={userPhase.definicion ? true : false}>
         {" "}
-        <Link to="/phasesDefinicion/">Definición</Link>
+        <Link to="/phases/">Definición</Link>
       </PhaseStyle>
 
       <PhaseStyle active={userPhase.ideacion ? true : false}>

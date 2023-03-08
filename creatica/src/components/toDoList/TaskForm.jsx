@@ -48,7 +48,7 @@ function TaskForm() {
         <option value="30m">30min</option>
         <option value="1h">1h</option>
         <option value="2h">2h</option>
-        <option value="mmás de 2h">+2h</option>
+        <option value="más de 2h">+2h</option>
       </select>
 
       <input

@@ -7,14 +7,14 @@ function TaskCard({ task }) {
 
   return (
     <div className="todolistCard">
-      <h4 className="textTask">Título de la tarea: {task.title}</h4>
-      <h4 className="textTask">
+      <p>Título de la tarea: {task.title}</p>
+      <p>
         Fase: <b>{task.phase}</b>
-      </h4>
-      <p className="textTask">Descripción: {task.description}</p>
+      </p>
+      <p>Descripción: {task.description}</p>
 
-      <h4 className="textTask">Duración: {task.time}</h4>
-      <h4 className="textTask">Relevancia: {task.relevance}</h4>
+      <p>Duración: {task.time}</p>
+      <p>Relevancia: {task.relevance}</p>
 
       <button className="delete" onClick={() => deleteTask(task.id)}>
         Esborrar

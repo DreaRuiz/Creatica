@@ -1,23 +1,46 @@
 import TaskCard from "./TaskCard";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { TaskContext } from "../../Context/TaskContext";
 
 function TaskList() {
-
+  // SI NO HI HA TASQUES MOSTRA "No hay tareas pendientes"
   const { tasks } = useContext(TaskContext);
+  const [shouldSort, setShouldSort] = useState(false);
+
   if (tasks.length === 0) {
     return <h4>No hay tareas pendientes</h4>;
   }
 
-    return (
-      <div>
-      <div className="taskListStyle">
-        {tasks.map((task, index) => (
-          <TaskCard key={index} task={task} />
-        ))}
-      </div>
-      </div>
-    );
+  // ORDENAR TASQUES SEGONS LA RELLEVÀNCIA
+  let sortedTasks = [...tasks];
+  if (shouldSort) {
+    // Ordena solo si shouldSort es verdadero
+    sortedTasks = tasks.sort((a, b) => {
+      if (a.relevance === "urgente" && b.relevance !== "urgente") {
+        return -1;
+      } else if (a.relevance === "importante" && b.relevance === "futura") {
+        return -1;
+      } else if (a.relevance === "importante" && b.relevance === "urgente") {
+        return 1;
+      } else if (a.relevance === "futura" && b.relevance !== "futura") {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
   }
 
+  return (
+    <div>
+      <div className="taskListStyle">
+        {sortedTasks.map((task, index) => (
+          <TaskCard key={index} task={task} />
+        ))}
+        </div>
+      {tasks.length > 1 && (
+        <button onClick={() => setShouldSort(true)}>Ordena por relevancia</button>
+      )}
+    </div>
+  );
+}
 export default TaskList;

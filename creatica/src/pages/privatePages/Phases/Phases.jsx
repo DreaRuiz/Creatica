@@ -3,11 +3,20 @@ import { HeaderUser } from "../../../components/Headeruser";
 import fases1img from "../../../assets/fases1img.png";
 import fasesDef2 from "../../../assets/fasesDef2.png";
 import { Link } from "react-router-dom";
-import { TaskContext } from '../../../Context/TaskContext'
+import { TaskContext } from "../../../Context/TaskContext";
+import Pdf from "../../../assets/pdf/Dia2.pdf";
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
-  const phase = {definicion: true}
+  const phase = { definicion: true };
+
+  // OBRIR PDF EN UNA FINESTRA NOVA AMB POSSIBILITAT DE DESCARREGAR-HO (pdf guardat a assets)
+  function downloadPdf() {
+    const fileName = "Dia2.pdf";
+    const pdfWindow = window.open(Pdf, "_blank");
+    pdfWindow.document.title = fileName;
+  }
+
   return (
     <>
       <HeaderUser />
@@ -32,6 +41,7 @@ function Phases() {
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
         <button className="login">DESCARGAR</button>
+        <button onClick={downloadPdf}>Descargar PDF</button>
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.
