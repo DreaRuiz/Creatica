@@ -4,10 +4,17 @@ import fases1img from "../../../assets/fases1img.png";
 import fasesDef2 from "../../../assets/fasesDef2.png";
 import { Link } from "react-router-dom";
 import { TaskContext } from '../../../Context/TaskContext'
+import Pdf from "../../../assets/pdf/Testeo.pdf";
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
   const phase = {testeo: true}
+
+  function downloadPdf() {
+    const fileName = "Testeo.pdf";
+    const pdfWindow = window.open(Pdf, "_blank");
+    pdfWindow.document.title = fileName;
+  }
 
   return (
     <>
@@ -32,7 +39,7 @@ function Phases() {
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
-        <button className="login">DESCARGAR</button>
+        <button className="login" onClick={downloadPdf}>Descargar</button>
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.

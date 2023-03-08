@@ -4,10 +4,18 @@ import { HeaderUser } from "../../../components/Headeruser";
 import faseProto2 from "../../../assets/faseProto2.png"; */
 import { Link } from "react-router-dom";
 import { TaskContext } from '../../../Context/TaskContext'
+import Pdf from "../../../assets/pdf/Prototipado.pdf";
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
   const phase = {prototipado: true}
+
+  function downloadPdf() {
+    const fileName = "Prototipado.pdf";
+    const pdfWindow = window.open(Pdf, "_blank");
+    pdfWindow.document.title = fileName;
+  }
+
   return (
     <>
       <HeaderUser />
@@ -28,7 +36,7 @@ function Phases() {
         <p>
         Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
-        <button className="login">DESCARGAR</button>
+        <button className="login" onClick={downloadPdf}>Descargar</button>
         <p>
         Es importante que antes de pasar a la siguiente fase tengas definidos los objetivos de esta.
         </p>

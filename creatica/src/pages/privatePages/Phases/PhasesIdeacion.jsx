@@ -5,10 +5,18 @@ import { HeaderUser } from "../../../components/Headeruser";
 import faseIdea2 from "../../../assets/fasesIdea2.png"; */
 import { Link } from "react-router-dom";
 import { TaskContext } from '../../../Context/TaskContext'
+import Pdf from "../../../assets/pdf/Ideacion.pdf";
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
   const phase = {ideacion: true}
+
+  function downloadPdf() {
+    const fileName = "Ideacion.pdf";
+    const pdfWindow = window.open(Pdf, "_blank");
+    pdfWindow.document.title = fileName;
+  }
+
   return (
     <>
       <HeaderUser />
@@ -36,7 +44,7 @@ function Phases() {
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
-        <button className="login">DESCARGAR</button>
+        <button className="login" onClick={downloadPdf}>Descargar </button>
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.
