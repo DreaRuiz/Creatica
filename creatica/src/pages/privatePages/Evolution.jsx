@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { TaskContext } from "../../Context/TaskContext";
-import { PhaseStyle } from "../../styled";
 import { Link } from "react-router-dom";
 import { HeaderUser } from "../../components/HeaderUser";
 
@@ -10,29 +9,24 @@ function Evolution() {
   return (
     <>
       <HeaderUser />
-      <PhaseStyle active={userPhase.definicion ? true : false}>
-        {" "}
-        <Link to="/phases/">Definición</Link>
-      </PhaseStyle>
 
-      <PhaseStyle active={userPhase.ideacion ? true : false}>
-        {" "}
-        <Link to="/phasesIdeacion/">Ideación</Link>
-      </PhaseStyle>
-
-      <PhaseStyle active={userPhase.creacion ? true : false}>
-        {" "}
-        <Link to="/phasesCreacion/">Creación</Link>
-      </PhaseStyle>
-
-      <PhaseStyle active={userPhase.prototipado ? true : false}>
-        {" "}
-        <Link to="/phasesPrototipado/">Prototipado</Link>
-      </PhaseStyle>
-      <PhaseStyle active={userPhase.testeo ? true : false}>
-        {" "}
-        <Link to="/phasesTesteo/">Testeo</Link>
-      </PhaseStyle>
+      <ul className="steps steps-vertical">
+        <li className={`step ${userPhase.definicion ? "step-primary" : ""}`}>
+          <Link to="/phases/">Definición</Link>
+        </li>
+        <li className={`step ${userPhase.ideacion ? "step-primary" : ""}`}>
+          <Link to="/phasesIdeacion/">Ideación</Link>
+        </li>
+        <li className={`step ${userPhase.creacion ? "step-primary" : ""}`}>
+          <Link to="/phasesCreacion/">Creación</Link>
+        </li>
+        <li className={`step ${userPhase.prototipado ? "step-primary" : ""}`}>
+          <Link to="/phasesPrototipado/">Prototipado</Link>
+        </li>
+        <li className={`step ${userPhase.testeo ? "step-primary" : ""}`}>
+          <Link to="/phasesTesteo/">Testeo</Link>
+        </li>
+      </ul>
     </>
   );
 }

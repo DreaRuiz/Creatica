@@ -48,12 +48,14 @@ function Phases() {
           <button onClick={() => savePhase(phase)} className="login">FASE COMPLETADA</button>
         </Link>
       </div>
+      <div className="btn-group grid grid-cols-2">
       <Link type="link" to="/phasesIdeacion/">
-        <button> anterior </button>
+        <button className="btn btn-outline rounded-full mr-5"> anterior </button>
       </Link>
       <Link type="link" to="/phasesPrototipado/">
-        <button> siguiente </button>
+        <button className="btn btn-outline rounded-full ml-5"> siguiente </button>
       </Link>
+      </div>
     </>
   );
 }

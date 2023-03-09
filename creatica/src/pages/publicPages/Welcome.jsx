@@ -10,11 +10,11 @@ export function Welcome() {
     <>
       <HeaderHome />
       <div className="welcome">
-        <h1>CREATICA</h1>
-        <h4>
-          DESARROLLA TU PROYECTO <br />
+
+        <h1>
+          DESARROLLA TU PROYECTO
           PONIENDO LA VIDA EN EL CENTRO
-        </h4>
+        </h1>
         <img src={welcome}></img>
         <p className="text">
           Si no sabes por dónde empezar, este es tu lugar. Aquí podrás trabajar
@@ -23,7 +23,7 @@ export function Welcome() {
           información y herramientas para poner en marcha tu idea.
         </p>
         <Link type="link" to="/UserMenu/">
-          <button className="login">EMPEZAR</button>‡
+          <button className="btn btn-outline btn-primary rounded-full m-5">EMPEZAR</button>
         </Link>
         <h2>¿CÓMO FUNCIONA?</h2>
         <div className="text">

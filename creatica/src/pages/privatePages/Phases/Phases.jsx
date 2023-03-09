@@ -20,7 +20,7 @@ function Phases() {
   return (
     <>
       <HeaderUser />
-      <div className="welcome">
+      <div>
         <h2>FASE: DEFINICIÓN</h2>
         <p>
           En esta fase, debemos recopilar y cribar la información para ir
@@ -40,7 +40,7 @@ function Phases() {
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
-        <button className="login" onClick={downloadPdf}>
+        <button onClick={downloadPdf}>
           Descargar
         </button>
         <p>
@@ -48,7 +48,7 @@ function Phases() {
           los objetivos de esta.
         </p>
         <Link type="link" to="/phasesIdeacion/">
-          <button onClick={() => savePhase(phase)} className="login">
+          <button onClick={() => savePhase(phase)}>
             FASE COMPLETADA
           </button>
         </Link>
@@ -61,3 +61,8 @@ function Phases() {
 }
 
 export default Phases;
+
+<div className="btn-group grid grid-cols-2">
+  <button className="btn btn-outline">Previous page</button>
+  <button className="btn btn-outline">Next</button>
+</div>

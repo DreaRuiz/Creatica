@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import loginImg from "../../assets/login.png";
 import { AuthContext } from "../../Context/AuthContext";
+import { HeaderHome } from "../../components/HeaderHome";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Login = () => {
       alert("Invalid email or password");
     }
     console.log(error);
-    
+
     setEmail("");
     setPassword("");
 
@@ -26,7 +27,8 @@ const Login = () => {
   };
   return (
     <>
-      <div className="loginWindow">
+      <HeaderHome />
+      <div>
         <h1>¡HOLA!</h1>
         <div>
           <img className="imageLogin" src={loginImg}></img>
@@ -34,37 +36,43 @@ const Login = () => {
 
         <form>
           <div>
-            <input
-            className="input input-bordered input-primary w-full max-w-xs"
-              type="email"
-              placeholder="Introduce tu email"
-              autoComplete="on"
-              required
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-            className="input input-bordered input-primary w-full max-w-xs"
-              type="password"
-              placeholder="Contraseña"
-              minLength="6"
-              required
-              autoComplete="off"
-              onChange={(e) => setPassword(e.target.value)}
-            />
             <div>
-              <Link className="forgotPass" type="link" to="/ForgotPassword">
-                {" "}
-                ¿Has olvidado tu contraseña?{" "}
-              </Link>
+              <input
+                className="input input-bordered input-primary rounded-full w-full max-w-xs mt-2 mb-1"
+                type="email"
+                placeholder="Introduce tu email"
+                autoComplete="on"
+                required
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+
+            <div>
+              <input
+                className="input input-bordered input-primary rounded-full w-full max-w-xs mt-2 mb-1"
+                type="password"
+                placeholder="Contraseña"
+                minLength="6"
+                required
+                autoComplete="off"
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
           </div>
-          <button className="login" type="submit" onClick={onLogin}>
+          <div>
+            <Link className="forgotPass" type="link" to="/ForgotPassword">
+              {" "}
+              ¿Has olvidado tu contraseña?{" "}
+            </Link>
+          </div>
+
+          <button className="btn btn-primary rounded-full mt-3" type="submit" onClick={onLogin}>
             INICIA SESIÓN
           </button>
           <div>
             <Link className="subtextLogin" type="link" to="/register/">
               {" "}
-              O CREA UNA CUENTA{" "}
+              CREA UNA CUENTA{" "}
             </Link>
           </div>
         </form>

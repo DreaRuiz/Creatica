@@ -42,6 +42,7 @@ function TaskForm() {
             <option value="prototipado">Prototipado</option>
             <option value="testeo">Testeo</option>
           </select>
+
           <select
             className="select select-primary select-sm max-w-xs m-1 rounded-full"
             value={relevance}
@@ -65,6 +66,7 @@ function TaskForm() {
             <option value="más de 2h">+2h</option>
           </select>
         </div>
+
         <div>
           <input
             className="input input-bordered input-primary w-full max-w-xs mt-3 mb-3 rounded-full"
@@ -76,7 +78,7 @@ function TaskForm() {
         </div>
         <div>
           <textarea
-            className="textarea textarea-primary w-full mb-3 rounded-full"
+            className="textarea textarea-primary w-full max-w-xs mt-3 mb-3 rounded-full"
             placeholder="Añade descripción de la tarea"
             onChange={(e) => setDescription(e.target.value)}
             value={description}

@@ -41,7 +41,7 @@ function tracking() {
       <Link type="link" to={nextPage}>
         <button
           onClick={() => addTrack(currentTrack.positiveText)}
-          className="trackButton"
+          
         >
           {currentTrack.positiveTitle}
         </button>
@@ -49,7 +49,7 @@ function tracking() {
       <Link type="link" to={nextPage}>
         <button
           onClick={() => addTrack(currentTrack.negativeText)}
-          className="trackButton"
+          
         >
           {currentTrack.negativeTitle}
         </button>

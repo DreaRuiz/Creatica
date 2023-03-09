@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { TaskContext } from "../../Context/TaskContext";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // DONA FORMAT A LA TASCA
 function TaskCard({ task }) {
@@ -23,14 +25,14 @@ function TaskCard({ task }) {
         <div className={`badge ${getBadgeColor(task.relevance)}`}>
           {task.relevance}
         </div>
-        <p className="card-actions justify-end item-aling-top">{task.time}</p>
+        <div>
+        
+          <p className="card-actions justify-end item-aling-top"><FontAwesomeIcon className="mt-1" icon={faClock} />{task.time}</p>
+        </div>
         <h2 className="card-title mt-3">{task.title}</h2>
         <p className="card-actions justify-start"> {task.description}</p>
-       
 
-        <p className="card-actions justify-start">
-          Fase: {task.phase}
-        </p>
+        <p className="card-actions justify-start">Fase: {task.phase}</p>
       </div>
       <div className="justify-end">
         <button
@@ -45,4 +47,3 @@ function TaskCard({ task }) {
 }
 
 export default TaskCard;
-

@@ -9,7 +9,7 @@ import {
   signOut,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import { setDoc, doc, connectFirestoreEmulator } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
 import { auth, db } from "../config/firebase";
 
 // CREO EL CONTEXT I EL PROVIDER

@@ -3,13 +3,14 @@ import { useRef } from "react";
 import comofunciona from "../../assets/comofunciona.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
+import { HeaderHome } from "../../components/HeaderHome";
 
 // FIREBASE ENVIA EL MAIL DE REESTABLIRPASS (al emailRef introduit validant que correspon a un user)
 const ForgotPassword = () => {
   const emailRef = useRef();
 
-  const { resetPassword, error, setError, message, setMessage } = useContext(AuthContext);
-  
+  const { resetPassword, error, setError, message, setMessage } =
+    useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,6 +27,7 @@ const ForgotPassword = () => {
   };
   return (
     <>
+      <HeaderHome />
       <div>
         <h3>REESTABLECER CONTRASEÑA</h3>
         <div>
@@ -70,6 +72,7 @@ const ForgotPassword = () => {
             <label htmlFor="email">
               <p>Introduce tu email para cambiar la contraseña</p>
               <input
+                className="btn btn-primary rounded-full mt-3 mb-3 normal-case"
                 id="email"
                 name="email"
                 type="email"
@@ -77,13 +80,16 @@ const ForgotPassword = () => {
                 ref={emailRef}
                 required
               />
+
+
+
             </label>
 
-            <button>
+            <button className="btn btn-primary rounded-full mt-3">
               <span>ENVIAR EMAIL</span>
             </button>
 
-            <p>
+            <p className="subtextLogin m-3">
               {" "}
               ¿Necesitas una cuenta? <Link to="/register">Regístrate</Link>
             </p>
