@@ -3,7 +3,6 @@ import { HeaderUser } from "../../../components/Headeruser";
 import Pdf from "../../../assets/pdf/+info.pdf";
 
 function PhasesFinal() {
-
   function downloadPdf() {
     const fileName = "+info.pdf";
     const pdfWindow = window.open(Pdf, "_blank");
@@ -20,7 +19,9 @@ function PhasesFinal() {
           del proyecto así que estudia tu público y escoge bien los canales y el
           tono comuncativo que utilizarás.
         </p>
-        <button className="login" onClick={downloadPdf}>Descargar</button>
+        <button className="btn btn-outline btn-accent rounded-full  mt-3 mb-3" onClick={downloadPdf}>
+          Descargar
+        </button>
       </div>
     </>
   );

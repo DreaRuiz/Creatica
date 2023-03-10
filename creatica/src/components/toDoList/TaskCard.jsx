@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { TaskContext } from "../../Context/TaskContext";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // DONA FORMAT A LA TASCA
@@ -26,20 +26,22 @@ function TaskCard({ task }) {
           {task.relevance}
         </div>
         <div>
-        
-          <p className="card-actions justify-end item-aling-top"><FontAwesomeIcon className="mt-1" icon={faClock} />{task.time}</p>
+          <p className="card-actions justify-end item-aling-top">
+            <FontAwesomeIcon className="mt-" icon={faClock} />
+            {task.time}
+          </p>
         </div>
         <h2 className="card-title mt-3">{task.title}</h2>
         <p className="card-actions justify-start"> {task.description}</p>
 
         <p className="card-actions justify-start">Fase: {task.phase}</p>
       </div>
-      <div className="justify-end">
+      <div className=" justify-end item-aling-down">
         <button
-          className="btn btn-outline btn-error rounded-full m-3"
+          className="btn btn-outline btn-error rounded-full m-3 "
           onClick={() => deleteTask(task.id)}
         >
-          Eliminar
+          <FontAwesomeIcon icon={faTrash} />
         </button>
       </div>
     </div>

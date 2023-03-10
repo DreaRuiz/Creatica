@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { TaskContext } from "../../../Context/TaskContext";
 import Pdf from "../../../assets/pdf/Definicion.pdf";
 
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 function Phases() {
   const { savePhase } = useContext(TaskContext);
   const phase = { definicion: true };
@@ -40,7 +43,10 @@ function Phases() {
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
-        <button onClick={downloadPdf}>
+        <button
+          className="btn btn-outline btn-accent rounded-full mt-3 mb-3"
+          onClick={downloadPdf}
+        >
           Descargar
         </button>
         <p>
@@ -48,21 +54,19 @@ function Phases() {
           los objetivos de esta.
         </p>
         <Link type="link" to="/phasesIdeacion/">
-          <button onClick={() => savePhase(phase)}>
+          <button
+            className="btn btn-outline btn-secondary rounded-full mt-3 mb-3"
+            onClick={() => savePhase(phase)}
+          >
             FASE COMPLETADA
           </button>
         </Link>
       </div>
       <Link type="link" to="/phasesIdeacion/">
-        <button> siguiente </button>
+        <button><FontAwesomeIcon className="mr-4 ml-4" icon={faArrowRight}/></button>
       </Link>
     </>
   );
 }
 
 export default Phases;
-
-<div className="btn-group grid grid-cols-2">
-  <button className="btn btn-outline">Previous page</button>
-  <button className="btn btn-outline">Next</button>
-</div>

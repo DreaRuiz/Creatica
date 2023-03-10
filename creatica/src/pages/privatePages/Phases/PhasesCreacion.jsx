@@ -3,12 +3,15 @@ import { HeaderUser } from "../../../components/Headeruser";
 import fases1img from "../../../assets/fases1img.png";
 import fasesDef2 from "../../../assets/fasesDef2.png";
 import { Link } from "react-router-dom";
-import { TaskContext } from '../../../Context/TaskContext'
+import { TaskContext } from "../../../Context/TaskContext";
 import Pdf from "../../../assets/pdf/Creacion.pdf";
+
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
-  const phase = {creacion: true}
+  const phase = { creacion: true };
 
   function downloadPdf() {
     const fileName = "Creacion.pdf";
@@ -39,22 +42,26 @@ function Phases() {
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
-        <button className="login" onClick={downloadPdf}>Descargar</button>
+        <button className="btn btn-outline btn-accent rounded-full mt-3 mb-3" onClick={downloadPdf}>
+          Descargar
+        </button>
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.
         </p>
         <Link type="link" to="/phasesPrototipado/">
-          <button onClick={() => savePhase(phase)} className="login">FASE COMPLETADA</button>
+          <button className="btn btn-outline btn-secondary rounded-full  mt-3 mb-3" onClick={() => savePhase(phase)}>
+            FASE COMPLETADA
+          </button>
         </Link>
       </div>
-      <div className="btn-group grid grid-cols-2">
-      <Link type="link" to="/phasesIdeacion/">
-        <button className="btn btn-outline rounded-full mr-5"> anterior </button>
-      </Link>
-      <Link type="link" to="/phasesPrototipado/">
-        <button className="btn btn-outline rounded-full ml-5"> siguiente </button>
-      </Link>
+      <div>
+        <Link type="link" to="/phasesIdeacion/">
+        <button><FontAwesomeIcon className="mr-4 ml-4" icon={faArrowLeft}/></button>
+        </Link>
+        <Link type="link" to="/phasesPrototipado/">
+        <button><FontAwesomeIcon className="mr-4 ml-4" icon={faArrowRight}/></button>
+        </Link>
       </div>
     </>
   );

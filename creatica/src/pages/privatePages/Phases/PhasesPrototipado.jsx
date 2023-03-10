@@ -3,12 +3,15 @@ import { HeaderUser } from "../../../components/Headeruser";
 /* import faseProto from "../../../assets/faseProto.png"
 import faseProto2 from "../../../assets/faseProto2.png"; */
 import { Link } from "react-router-dom";
-import { TaskContext } from '../../../Context/TaskContext'
+import { TaskContext } from "../../../Context/TaskContext";
 import Pdf from "../../../assets/pdf/Prototipado.pdf";
+
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
-  const phase = {prototipado: true}
+  const phase = { prototipado: true };
 
   function downloadPdf() {
     const fileName = "Prototipado.pdf";
@@ -22,33 +25,41 @@ function Phases() {
       <div className="welcome">
         <h2>FASE: PROTOTIPADO</h2>
         <p>
-        En la etapa de Prototipado volvemos las ideas realidad. Construir prototipos hace las ideas palpables y nos ayuda a visualizar las posibles soluciones. Además, pone de manifiesto elementos que debemos mejorar, refinar o cambiar antes de llegar al resultado final.
+          En la etapa de Prototipado volvemos las ideas realidad. Construir
+          prototipos hace las ideas palpables y nos ayuda a visualizar las
+          posibles soluciones. Además, pone de manifiesto elementos que debemos
+          mejorar, refinar o cambiar antes de llegar al resultado final.
         </p>
-{/*         <img src={faseProto2}></img> */}
+        {/*         <img src={faseProto2}></img> */}
         <h2>OBJETIVOS:</h2>
         <ul>
           <li>Materializar la idea</li>
           <li>Resolver los problemas que surjan durante la construcción</li>
           <li>Conocer la viabilidad del producto</li>
         </ul>
-{/*         <img src={fasesProto}></img> */}
+        {/*         <img src={fasesProto}></img> */}
         <h2>MATERIAL</h2>
         <p>
-        Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
+          Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
-        <button className="login" onClick={downloadPdf}>Descargar</button>
+        <button className="btn btn-outline btn-accent rounded-full mt-3 mb-3" onClick={downloadPdf}>
+          Descargar
+        </button>
         <p>
-        Es importante que antes de pasar a la siguiente fase tengas definidos los objetivos de esta.
+          Es importante que antes de pasar a la siguiente fase tengas definidos
+          los objetivos de esta.
         </p>
         <Link type="link" to="/phasesTesteo/">
-          <button onClick={() => savePhase(phase)} className="login">FASE COMPLETADA</button>
+          <button className="btn btn-outline btn-secondary rounded-full mt-3 mb-3" onClick={() => savePhase(phase)}>
+            FASE COMPLETADA
+          </button>
         </Link>
       </div>
       <Link type="link" to="/phasesCreacion/">
-        <button> anterior </button>
+      <button><FontAwesomeIcon className="mr-4 ml-4" icon={faArrowLeft}/></button>
       </Link>
       <Link type="link" to="/phasesTesteo/">
-        <button> siguiente </button>
+      <button><FontAwesomeIcon className="mr-4 ml-4" icon={faArrowRight}/></button>
       </Link>
     </>
   );

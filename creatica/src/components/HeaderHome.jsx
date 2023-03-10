@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const HeaderHome = () => {
   return (
     <>
-      <div className="navbar bg-white rounded-full p-0 mb-5 position-center">
-        <div className="navbar">
+      <div className="navbar bg-white rounded-full p-0 mb-5 position-center w-full">
+  <div className="navbar flex justify-between items-center px-4">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <svg
@@ -55,3 +55,5 @@ export const HeaderHome = () => {
     </>
   );
 };
+
+

@@ -2,7 +2,12 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 
-import { faBook, faListCheck,faPenToSquare, } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBook,
+  faListCheck,
+  faPenToSquare,
+  faHome,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const HeaderUser = () => {
@@ -12,24 +17,9 @@ export const HeaderUser = () => {
   };
   return (
     <>
-      {/*      <div>
-        <Link to="/">HOME </Link>
-      </div>
-      <div>
-     <Link to="/Welcome" onClick={handleLogOut}>Cerrar sesión</Link>
-      </div>
-      <div>
-     
-        <Link to="/Evolution">EVOLUTION </Link>
-
-        <Link to="/Recommendations">RECCOMENDATIONS</Link>
-
-
-      {/*  </div> */}
-
-      <div className="navbar bg-white rounded-full p-0 mb-5 position-center">
-        <div className="navbar">
-          <div className="dropdown">
+     <div className="navbar bg-white rounded-full p-0 mb-5 position-center w-full">
+  <div className="navbar flex justify-between items-center px-4">
+    <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,46 +47,36 @@ export const HeaderUser = () => {
                 <Link to="/Recommendations">Recomendaciones</Link>
               </li>
               <li>
-              <Link to="/Welcome" onClick={handleLogOut}>Cerrar sesión</Link>
+                <Link to="/Welcome" onClick={handleLogOut}>
+                  Cerrar sesión
+                </Link>
               </li>
             </ul>
           </div>
 
-          <Link to="/Welcome">
-            <p className="btn btn-ghost normal-case text-xl">
-              Creatica
-            </p>
-          </Link>
-
-
-
-          <div className="icon-container">
-            <Link to="/Phases">
+          <div className="icon-container flex justify-end">
+            <Link to="/Welcome">
               {" "}
-              <FontAwesomeIcon
-                className="mr-4 ml-4"
-                icon={faBook}
-              />
+              <FontAwesomeIcon className="mr-4 ml-4" icon={faHome} />
             </Link>
 
-            <Link to="/Tracking/motivation">
-              {" "}
-              <FontAwesomeIcon
-                className="mr-4 ml-4"
-                icon={faPenToSquare}
-              />
-            </Link>
+            <div className="icon-container">
+              <Link to="/Phases">
+                {" "}
+                <FontAwesomeIcon className="mr-4 ml-4" icon={faBook} />
+              </Link>
 
-            <Link to="/ToDoList">
-              {" "}
-              <FontAwesomeIcon
-                className="mr-4 ml-4"
-                icon={faListCheck}
-              />
-            </Link>
+              <Link to="/Tracking/motivation">
+                {" "}
+                <FontAwesomeIcon className="mr-4 ml-4" icon={faPenToSquare} />
+              </Link>
+
+              <Link to="/ToDoList">
+                {" "}
+                <FontAwesomeIcon className="mr-4 ml-4" icon={faListCheck} />
+              </Link>
+            </div>
           </div>
-
-          
         </div>
       </div>
     </>

@@ -6,6 +6,7 @@ import { userRecom } from "../../data/userRecommendations";
 import { AuthContext } from "../../Context/AuthContext";
 import { updateDoc, doc } from "firebase/firestore";
 import { db } from "../../config/firebase";
+import { HeaderUser } from "../../components/HeaderUser";
 
 function tracking() {
   // PORTA CURRENTUSER DEL CONTEXT
@@ -36,26 +37,21 @@ function tracking() {
   };
 
   return (
-    <div>
+    <>
+      <HeaderUser />
       <h3 className="sectionTitle">TRAQUEA TUS HABITOS</h3>
       <Link type="link" to={nextPage}>
-        <button
-          onClick={() => addTrack(currentTrack.positiveText)}
-          
-        >
+        <button onClick={() => addTrack(currentTrack.positiveText)}>
           {currentTrack.positiveTitle}
         </button>
       </Link>
       <Link type="link" to={nextPage}>
-        <button
-          onClick={() => addTrack(currentTrack.negativeText)}
-          
-        >
+        <button onClick={() => addTrack(currentTrack.negativeText)}>
           {currentTrack.negativeTitle}
         </button>
       </Link>
       <img className="imageDown" src={trackMoti}></img>
-    </div>
+    </>
   );
 }
 

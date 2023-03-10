@@ -18,7 +18,7 @@ function UserMenu() {
 
 export default UserMenu;
 
-
+// TODO: Crear una pàgina d'aterratge on expliqui les diferents coses que pots fer 
 <Link className="subtextLogin" type="link" to="/register/">
 {" "}
 O CREA UNA CUENTA{" "}

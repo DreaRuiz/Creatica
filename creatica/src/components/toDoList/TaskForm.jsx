@@ -49,8 +49,8 @@ function TaskForm() {
             onChange={(e) => setRelevance(e.target.value)}
           >
             <option value="">Relevancia</option>
-            <option value="importante">Importante</option>
             <option value="urgente">Urgente</option>
+            <option value="importante">Importante</option>
             <option value="futura">Futura</option>
           </select>
 
