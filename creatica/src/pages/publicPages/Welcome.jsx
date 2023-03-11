@@ -32,6 +32,8 @@ export function Welcome() {
             necesarios hasta llevarla a cabo. También tendrás acceso a material
             exclusivo para ayudarte en cada fase de tu proyecto.
           </p>
+
+          <br/>
           <p>
             Podrás hacer un seguimiento de tu estado de ánimo y de las
             diferentes capacidades de trabajo en cada momento. Con esto y las

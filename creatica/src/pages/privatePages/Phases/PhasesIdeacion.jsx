@@ -24,7 +24,7 @@ function Phases() {
     <>
       <HeaderUser />
       <div className="welcome">
-        <h2>FASE: IDEACIÓN</h2>
+        <h2>IDEACIÓN</h2>
         <p>
           La fase de ideación tiene como objetivo la generación de opciones. No
           debemos quedarnos con la primera idea que se nos ocurra. En esta fase,
@@ -35,6 +35,7 @@ function Phases() {
           la fase anterior.
         </p>
         {/*         <img src={faseIdea2}></img> */}
+        <br />
         <h3>OBJETIVOS</h3>
         <ul>
           <li>Indagar sobre las diferents soluciones a un mismo problema</li>
@@ -43,6 +44,7 @@ function Phases() {
           <li>Definir la idea en palabras simples</li>
         </ul>
         {/*         <img src={faseIdea}></img> */}
+        <br />
         <h3>MATERIAL</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
@@ -50,6 +52,7 @@ function Phases() {
         <button className="btn btn-outline btn-accent rounded-full mt-3 mb-3" onClick={downloadPdf}>
           Descargar{" "}
         </button>
+        <br />
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.

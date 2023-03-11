@@ -19,6 +19,10 @@ function PhasesFinal() {
           del proyecto así que estudia tu público y escoge bien los canales y el
           tono comuncativo que utilizarás.
         </p>
+        <br />
+        <p>
+          Aquí puedes descargar recursos a finalizar tu proyecto.
+        </p>
         <button className="btn btn-outline btn-accent rounded-full  mt-3 mb-3" onClick={downloadPdf}>
           Descargar
         </button>

@@ -30,6 +30,7 @@ function Phases() {
           since the 1500s, when an unknown printer too
         </p>
         <img src={fases1img}></img>
+        <br />
         <h3>OBJETIVOS</h3>
         <ul>
           <li>Objetivo 1</li>
@@ -38,6 +39,7 @@ function Phases() {
           <li>Objetivo 4</li>
         </ul>
         <img src={fasesDef2}></img>
+        <br />
         <h3>MATERIAL</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
@@ -45,6 +47,7 @@ function Phases() {
         <button className="btn btn-outline btn-accent rounded-full mt-3 mb-3" onClick={downloadPdf}>
           Descargar
         </button>
+        <br />
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.

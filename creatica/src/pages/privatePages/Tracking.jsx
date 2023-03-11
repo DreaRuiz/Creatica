@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useContext, useEffect } from "react";
-import trackMoti from "../../assets/trackMoti.png";
 import { Link, useParams } from "react-router-dom";
 import { userRecom } from "../../data/userRecommendations";
 import { AuthContext } from "../../Context/AuthContext";
@@ -60,8 +59,6 @@ function tracking() {
           </button>
         </Link>
       </div>
-
-      {/*   <img className="imageDown" src={trackMoti}></img> */}
     </>
   );
 }

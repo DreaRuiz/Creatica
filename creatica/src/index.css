@@ -48,4 +48,10 @@ h3{
 .btn-wide {
   width: 60%;
 }
-
+.stepsList{
+  font-family:  'Raleway', sans-serif;
+  font-weight: 500;
+  color: #65C3C8;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

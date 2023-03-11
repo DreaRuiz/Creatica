@@ -23,7 +23,7 @@ function Phases() {
     <>
       <HeaderUser />
       <div className="welcome">
-        <h2>FASE: PROTOTIPADO</h2>
+        <h2>PROTOTIPADO</h2>
         <p>
           En la etapa de Prototipado volvemos las ideas realidad. Construir
           prototipos hace las ideas palpables y nos ayuda a visualizar las
@@ -31,6 +31,7 @@ function Phases() {
           mejorar, refinar o cambiar antes de llegar al resultado final.
         </p>
         {/*         <img src={faseProto2}></img> */}
+        <br />
         <h3>OBJETIVOS</h3>
         <ul>
           <li>Materializar la idea</li>
@@ -39,12 +40,14 @@ function Phases() {
         </ul>
         {/*         <img src={fasesProto}></img> */}
         <h3>MATERIAL</h3>
+        <br />
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
         <button className="btn btn-outline btn-accent rounded-full mt-3 mb-3" onClick={downloadPdf}>
           Descargar
         </button>
+        <br />
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.

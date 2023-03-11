@@ -19,19 +19,19 @@ function Evolution() {
       <p></p>
 
       <ul className="steps steps-vertical mt-5">
-        <li className={`step ${userPhase.definicion ? "step-primary" : ""}`}>
+        <li className={`step ${userPhase.definicion ? "step-primary" : ""} stepsList`}>
           <Link to="/phases/">Definición</Link>
         </li>
-        <li className={`step ${userPhase.ideacion ? "step-primary" : ""}`}>
+        <li className={`step ${userPhase.ideacion ? "step-primary" : ""} stepsList`}>
           <Link to="/phasesIdeacion/">Ideación</Link>
         </li>
-        <li className={`step ${userPhase.creacion ? "step-primary" : ""}`}>
+        <li className={`step ${userPhase.creacion ? "step-primary" : ""} stepsList`}>
           <Link to="/phasesCreacion/">Creación</Link>
         </li>
-        <li className={`step ${userPhase.prototipado ? "step-primary" : ""}`}>
+        <li className={`step ${userPhase.prototipado ? "step-primary" : ""} stepsList`}>
           <Link to="/phasesPrototipado/">Prototipado</Link>
         </li>
-        <li className={`step ${userPhase.testeo ? "step-primary" : ""}`}>
+        <li className={`step ${userPhase.testeo ? "step-primary" : ""} stepsList`}>
           <Link to="/phasesTesteo/">Testeo</Link>
         </li>
       </ul>

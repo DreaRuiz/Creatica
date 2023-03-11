@@ -32,6 +32,8 @@ function Phases() {
           soluciones serán clave para la obtención de un resultado innovador.
         </p>
         <img src={fases1img}></img>
+        <br />
+
         <h3>OBJETIVOS</h3>
         <ul>
           <li>Definir qué problema solucionas</li>
@@ -39,6 +41,8 @@ function Phases() {
           <li>Definir qué te diferencia de la competencia</li>
         </ul>
         <img src={fasesDef2}></img>
+        <br />
+
         <h3>MATERIAL</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
@@ -49,6 +53,8 @@ function Phases() {
         >
           Descargar
         </button>
+        <br />
+
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.
@@ -63,7 +69,9 @@ function Phases() {
         </Link>
       </div>
       <Link type="link" to="/phasesIdeacion/">
-        <button><FontAwesomeIcon className="mr-4 ml-4" icon={faArrowRight}/></button>
+        <button>
+          <FontAwesomeIcon className="mr-4 ml-4" icon={faArrowRight} />
+        </button>
       </Link>
     </>
   );
