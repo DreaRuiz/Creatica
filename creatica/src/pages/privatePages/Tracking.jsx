@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import trackMoti from "../../assets/trackMoti.png";
 import { Link, useParams } from "react-router-dom";
 import { userRecom } from "../../data/userRecommendations";
@@ -27,11 +27,11 @@ function tracking() {
 
   // GUARDAR A UN ARRAY ELS SELECCIONATS
   const addTrack = async (track) => {
-    setSelectedTracks([...selectedTracks, track]);
+    setSelectedTracks((prevSelectedTracks) => [...prevSelectedTracks, track]);
     if (currentUser != null) {
       const selectedTrackList = doc(db, "users", `${currentUser.uid}`);
       await updateDoc(selectedTrackList, {
-        userTracking: selectedTracks,
+        userTracking: [...selectedTracks, track],
       });
     }
   };
@@ -39,18 +39,29 @@ function tracking() {
   return (
     <>
       <HeaderUser />
-      <h3 className="sectionTitle">TRAQUEA TUS HABITOS</h3>
-      <Link type="link" to={nextPage}>
-        <button onClick={() => addTrack(currentTrack.positiveText)}>
-          {currentTrack.positiveTitle}
-        </button>
-      </Link>
-      <Link type="link" to={nextPage}>
-        <button onClick={() => addTrack(currentTrack.negativeText)}>
-          {currentTrack.negativeTitle}
-        </button>
-      </Link>
-      <img className="imageDown" src={trackMoti}></img>
+      <h2 className="sectionTitle">TRAQUEA TUS HABITOS</h2>
+      <div>
+        <Link type="link" to={nextPage}>
+          <button
+            className="btn btn-active  btn-warning mt-10 btn-wide btn-lg rounded-full"
+            onClick={() => addTrack(currentTrack.positiveText)}
+          >
+            {currentTrack.positiveTitle}
+          </button>
+        </Link>
+      </div>
+      <div>
+        <Link type="link" to={nextPage}>
+          <button
+            className="btn btn-active btn-success mt-10 btn-wide btn-lg rounded-full"
+            onClick={() => addTrack(currentTrack.negativeText)}
+          >
+            {currentTrack.negativeTitle}
+          </button>
+        </Link>
+      </div>
+
+      {/*   <img className="imageDown" src={trackMoti}></img> */}
     </>
   );
 }

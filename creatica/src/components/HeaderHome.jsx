@@ -39,7 +39,7 @@ export const HeaderHome = () => {
           </div>
 
           <Link to="/Welcome">
-            <p className="btn btn-ghost normal-case text-xl position-right">
+            <p className="btn btn-ghost normal-case text-xl position-right creatica">
               Creatica
             </p>
           </Link>

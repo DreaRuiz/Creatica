@@ -52,7 +52,7 @@ const Recommendations = () => {
   return (
     <div>
       <HeaderUser />
-      <h2>Recommendations:</h2>
+      <h2>RECOMENDACIONES</h2>
       <p>{recommendations}</p>
     </div>
   );

@@ -6,13 +6,17 @@ import { HeaderUser } from "../../components/HeaderUser";
 function ToDoList() {
   return (
     <>
-    <HeaderUser/>
+      <HeaderUser />
+      <h2>LISTA DE TAREAS</h2>
       <div className="todolist">
-        <h3 className="sectionTitle">AÑADE UNA TAREA</h3>
+    
+          <h3 className="divider">Añade una tarea</h3>
+   
+
         <TaskForm />
       </div>
       <div>
-      <h3 className="sectionTitle">TAREAS PENDIENTES</h3>
+        <h3 className="divider">Tareas pendientes</h3>
         <TaskList />
       </div>
     </>

@@ -23,14 +23,14 @@ function Phases() {
     <>
       <HeaderUser />
       <div className="welcome">
-        <h2>FASE: CREACIÓN</h2>
+        <h2>CREACIÓN</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer too
         </p>
         <img src={fases1img}></img>
-        <h2>OBJETIVOS:</h2>
+        <h3>OBJETIVOS</h3>
         <ul>
           <li>Objetivo 1</li>
           <li>Objetivo 2</li>
@@ -38,7 +38,7 @@ function Phases() {
           <li>Objetivo 4</li>
         </ul>
         <img src={fasesDef2}></img>
-        <h2>MATERIAL</h2>
+        <h3>MATERIAL</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>

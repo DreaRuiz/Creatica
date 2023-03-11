@@ -12,8 +12,7 @@ export function Welcome() {
       <div className="welcome">
 
         <h1>
-          DESARROLLA TU PROYECTO
-          PONIENDO LA VIDA EN EL CENTRO
+        Desarrolla tu proyecto poniendo la vida en el centro
         </h1>
         <img src={welcome}></img>
         <p className="text">

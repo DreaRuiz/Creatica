@@ -35,7 +35,7 @@ function Phases() {
           la fase anterior.
         </p>
         {/*         <img src={faseIdea2}></img> */}
-        <h2>OBJETIVOS:</h2>
+        <h3>OBJETIVOS</h3>
         <ul>
           <li>Indagar sobre las diferents soluciones a un mismo problema</li>
           <li>Escoger la mejor solución para implementar en tu proyecto</li>
@@ -43,7 +43,7 @@ function Phases() {
           <li>Definir la idea en palabras simples</li>
         </ul>
         {/*         <img src={faseIdea}></img> */}
-        <h2>MATERIAL</h2>
+        <h3>MATERIAL</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>

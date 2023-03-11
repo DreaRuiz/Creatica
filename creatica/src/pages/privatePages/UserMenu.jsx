@@ -4,22 +4,27 @@ import { HeaderUser } from "../../components/HeaderUser";
 import { Link } from "react-router-dom";
 
 function UserMenu() {
-
   return (
     <>
       <HeaderUser />
-      <Link type="link" to="/Phases/"><button className='trackButton'>EMPIEZA TU PROYECTO</button></Link>
-      <Link type="link" to="/tracking/motivation"><button className='trackButton'>TRAQUEA HABITOS</button></Link>
-      <Link type="link" to="/ToDoList/"><button className='trackButton'>LISTA DE TAREAS</button></Link>
-      <Footer/>
+      <Link type="link" to="/Phases/">
+        <h2>EMPIEZA TU PROYECTO</h2>
+      </Link>
+      <Link type="link" to="/tracking/motivation">
+        <h2>TRAQUEA HABITOS</h2>
+      </Link>
+      <Link type="link" to="/ToDoList/">
+        <h2>LISTA DE TAREAS</h2>
+      </Link>
+      <Footer />
     </>
   );
 }
 
 export default UserMenu;
 
-// TODO: Crear una pàgina d'aterratge on expliqui les diferents coses que pots fer 
+// TODO: Crear una pàgina d'aterratge on expliqui les diferents coses que pots fer
 <Link className="subtextLogin" type="link" to="/register/">
-{" "}
-O CREA UNA CUENTA{" "}
-</Link>
+  {" "}
+  O CREA UNA CUENTA{" "}
+</Link>;

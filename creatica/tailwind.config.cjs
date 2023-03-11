@@ -7,7 +7,7 @@
       {
         mytheme: {
 "primary": "#65C3C8",
-"secondary": "#EF9FBC",
+"secondary": "#fca5a5",
 "accent": "#EEAF3A",
 "neutral": "#291334",
 "base-100": "#FAF7F5",

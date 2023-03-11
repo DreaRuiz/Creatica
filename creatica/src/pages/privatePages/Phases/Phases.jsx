@@ -24,7 +24,7 @@ function Phases() {
     <>
       <HeaderUser />
       <div>
-        <h2>FASE: DEFINICIÓN</h2>
+        <h2>DEFINICIÓN</h2>
         <p>
           En esta fase, debemos recopilar y cribar la información para ir
           conformando el marco de nuestro proyecto.Buscar referentes y quedarnos
@@ -32,14 +32,14 @@ function Phases() {
           soluciones serán clave para la obtención de un resultado innovador.
         </p>
         <img src={fases1img}></img>
-        <h2>OBJETIVOS:</h2>
+        <h3>OBJETIVOS</h3>
         <ul>
           <li>Definir qué problema solucionas</li>
           <li>Conocer el campo en el que se desarollará el proyecto</li>
           <li>Definir qué te diferencia de la competencia</li>
         </ul>
         <img src={fasesDef2}></img>
-        <h2>MATERIAL</h2>
+        <h3>MATERIAL</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>

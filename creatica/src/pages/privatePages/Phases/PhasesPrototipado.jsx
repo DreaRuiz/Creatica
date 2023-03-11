@@ -31,14 +31,14 @@ function Phases() {
           mejorar, refinar o cambiar antes de llegar al resultado final.
         </p>
         {/*         <img src={faseProto2}></img> */}
-        <h2>OBJETIVOS:</h2>
+        <h3>OBJETIVOS</h3>
         <ul>
           <li>Materializar la idea</li>
           <li>Resolver los problemas que surjan durante la construcción</li>
           <li>Conocer la viabilidad del producto</li>
         </ul>
         {/*         <img src={fasesProto}></img> */}
-        <h2>MATERIAL</h2>
+        <h3>MATERIAL</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>

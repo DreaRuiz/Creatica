@@ -15,7 +15,6 @@ import ForgotPassword from "../pages/publicPages/ForgotPassword";
 // Rutes privades
 import UserMenu from "../pages/privatePages/UserMenu";
 import ToDoList from "../pages/privatePages/ToDoList";
-import Calendar from "../pages/privatePages/Calendar";
 import Phases from "../pages/privatePages/Phases/Phases";
 import Evolution from "../pages/privatePages/Evolution";
 import Tracking from "../pages/privatePages/Tracking";
@@ -53,14 +52,6 @@ const Router = () => (
           element={
             <PrivateRoute>
               <ToDoList />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/calendar/"
-          element={
-            <PrivateRoute>
-              <Calendar />
             </PrivateRoute>
           }
         />

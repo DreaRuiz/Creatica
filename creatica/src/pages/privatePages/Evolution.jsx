@@ -9,7 +9,7 @@ function Evolution() {
   return (
     <>
       <HeaderUser />
-      <h1>Recomendaciones</h1>
+      <h2>EVOLUCIÓN DEL PROYECTO</h2>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever

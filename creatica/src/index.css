@@ -2,212 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap');
-
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #000000;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #6675e3;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  align-items: center;
-  text-align: center;
-  justify-items: center;
-
+  font-family: 'Raleway', sans-serif;
 }
-
-h1 {
-  width: 375px;
-  height: 61px;
-  left: 0px;
-  top: 105px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 48px;
-  line-height: 58px;
-  text-align: center;
-  letter-spacing: -0.28px;
-  color: #000000; 
-}
-
-h3 {
-  width: 300px;
-  height: 79px;
-  left: 28px;
-  top: calc(50% - 79px/2 - 281.5px);
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 17px;
-  line-height: 21px;
-  display: flex;
-  align-items: center;
-  color: #000000;
-  mix-blend-mode: normal;
-}
-h4 {
-  width: 300px;
-  height: 61px;
-  left: 0px;
-  top: 105px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 200;
-  font-size: 15px;
-  line-height: 21px;
-  text-align: center;
-  color: #000000; 
-  margin-left: 10%;
-  margin-right: 10%;
-
- 
-}
-
-p {
-  width: 300px;
-  height: 180px;
-  left: 38px;
-  top: calc(50% - 180px/2 - 170px);
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #474747;
-}
-.sectionTitle {
-  margin-left: 15px;
-}
-
-input {
-  margin: 10px;
-  align-items: center;
-  width: 334px;
-  height: 43px;
-  left: 23px;
-  top: 135px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 21px;
-  border: none;
-}
-input:active {
-  color: #d8d8d8;
-}
-textarea {
-  font-family: 'Inter';
-  margin: 10px;
-  align-items: center;
-  width: 334px;
-  height: 70px;
-  left: 23px;
-  top: 135px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 21px;
-  border: none;
-  text-justify: center;
-} */
-
-/* button {
-  width: 155px;
-  height: 51px;
-  left: 182px;
-  top: 350px;
-  background: #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 31.5px;
-  border: none;
-  text-align: center;
-  justify-items: center;
-  font-family: 'Inter';
-  font-weight: 900;
-  font-size: 17px;
-  line-height: 21px;
-  align-items: center;
-  color: #000000;
-  mix-blend-mode: normal;
-}
-button:hover {
-  border-color: #2f2f2f;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
-
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #a9a9a9;
-  } */
-/*   button {
-    background-color: #f9f9f9;
-  } */
-/* } */
-
-/* LOGIN */
-/* .loginWindow {
-  margin-top: -150px;
-}
-.imageLogin {
-height: 280px;
-margin-top: -20px;
-
-}
-.loginBox {
-  margin: 5px;
-}
-
-.login {
-  width: 155px;
-  height: 51px;
-  left: 182px;
-  top: 350px;
-  background-color: #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 31.5px;
-  text-align: center;
-  justify-items: center;
-  font-family: 'Inter';
+h1, h2 {
+  font-family: 'Futura', sans-serif;
   font-weight: 800;
-  font-size: 17px;
-  line-height: 21px;
-  align-items: center;
-  color: #ffffff;
-  mix-blend-mode: normal;
-} */
+  color: #65C3C8;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h3{
+  font-family: 'Futura', sans-serif;
+  font-weight: 500;
+  color: #581c87;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+
+}
+.creatica{
+  font-family: 'Merriweather', serif;
+  font-weight: 800;
+  color: #20D3B0
+}
+
 .subtextLogin
 {
   font-weight: 400;
@@ -226,72 +45,7 @@ margin-top: -20px;
   display: flex;
   justify-content: flex-end;
 }
-
-/* REGISTER */
-/* .register{
-  background-image: url("./assets//register.png");
-  background-repeat: no-repeat;
- margin-top: -170px;
-}
-.registerForm{
- margin-top: 200px;
-}
- */
-/* WELCOME */
-/* .welcome {
-  align-items: center;
-  justify-content: center;
-  display: block;
-}
-.text {
-  margin-left: 10%;
-  margin-right: 10%;
-} */
-
-/* TO DO LIST */
-/* .todolist{
-  flex-direction: column;
-}
-.taskListStyle {
-  margin-top: 2vh;
-  margin-left: 5%;
-  margin-bottom: 2vh;
-  padding: 1vh;
-  text-align: center;
-  border: 2px solid #000000;
-  border-radius: 30px;
-  width: 80%;
-  justify-items: center;
-  align-items: center;
+.btn-wide {
+  width: 60%;
 }
 
-.textTask{
-  color: #474747;;
-  font-family: 'Inter';
-  text-align: left;
-} */
-
-/* TRACKING */
-/* .trackButton {
-display: column;
-border: 2px solid #000000;
-width: 300px;
-height: 120px;
-left: 28px;
-top: 211px;
-margin-bottom: 10px;
-background: #FFFFFF;
-mix-blend-mode: normal;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 92px;
-}
-.imageDown {
-  margin-bottom: 20px;
-  height: 280px;
-}
-
-.imageFocus{
-  background-image: url("./assets/trackFoco.png");
-  background-repeat: no-repeat;
- margin-top: -170px;
-} */
