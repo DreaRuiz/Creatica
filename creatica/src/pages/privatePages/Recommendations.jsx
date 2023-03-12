@@ -21,17 +21,15 @@ const Recommendations = () => {
 
   // PORTA EL TEXT DELS TRACKS SELECCIONATS DE FIRESTORE
   async function loadRecommendations() {
-    try {
+    if (currentUser == undefined) {
+      return;
+    }
       const userRef = doc(db, "users", currentUser.uid);
       const userData = await getDoc(userRef);
 
       if (userData.exists()) {
         setRecommendations(userData.data().userTracking);
-      } else {
       }
-    } catch (error) {
-      console.log(error);
-    }
   }
   if (recommendations.length === 0) {
     return (

@@ -1,15 +1,13 @@
 import React, { useContext } from "react";
 
 import { HeaderUser } from "../../../components/HeaderUser";
-/* import faseIdea from "../../../assets/phaseIdea.png"
-import faseIdea2 from "../../../assets/fasesIdea2.png"; */
 import { Link } from "react-router-dom";
 import { TaskContext } from "../../../Context/TaskContext";
 import Pdf from "../../../assets/pdf/Ideacion.pdf";
 
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import creatica14 from "../../../assets/img/creatica14.svg";
 function Phases() {
   const { savePhase } = useContext(TaskContext);
   const phase = { ideacion: true };
@@ -34,7 +32,7 @@ function Phases() {
           una idea clara y concisa sobre cómo resolver el problema elaborado en
           la fase anterior.
         </p>
-        {/*         <img src={faseIdea2}></img> */}
+
         <br />
         <h3>OBJETIVOS</h3>
         <ul>
@@ -43,13 +41,16 @@ function Phases() {
           <li>Hacer un listado de los diferentes caminos hacia esa solución</li>
           <li>Definir la idea en palabras simples</li>
         </ul>
-        {/*         <img src={faseIdea}></img> */}
+        <img src={creatica14}></img>
         <br />
         <h3>MATERIAL</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
-        <button className="btn btn-outline btn-accent rounded-full mt-3 mb-3" onClick={downloadPdf}>
+        <button
+          className="btn btn-outline btn-accent rounded-full mt-3 mb-3"
+          onClick={downloadPdf}
+        >
           Descargar{" "}
         </button>
         <br />
@@ -58,16 +59,23 @@ function Phases() {
           los objetivos de esta.
         </p>
         <Link type="link" to="/phasesCreacion/">
-          <button className="btn btn-outline btn-secondary rounded-full mt-3 mb-3" onClick={() => savePhase(phase)}>
+          <button
+            className="btn btn-outline btn-secondary rounded-full mt-3 mb-3"
+            onClick={() => savePhase(phase)}
+          >
             FASE COMPLETADA
           </button>
         </Link>
       </div>
       <Link type="link" to="/phases/">
-      <button><FontAwesomeIcon className="mr-4 ml-4" icon={faArrowLeft}/></button>
+        <button>
+          <FontAwesomeIcon className="mr-4 ml-4" icon={faArrowLeft} />
+        </button>
       </Link>
       <Link type="link" to="/phasesCreacion/">
-      <button><FontAwesomeIcon className="mr-4 ml-4" icon={faArrowRight}/></button>
+        <button>
+          <FontAwesomeIcon className="mr-4 ml-4" icon={faArrowRight} />
+        </button>
       </Link>
     </>
   );

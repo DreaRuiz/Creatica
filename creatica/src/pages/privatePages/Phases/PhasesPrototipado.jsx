@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { HeaderUser } from "../../../components/HeaderUser";
-/* import faseProto from "../../../assets/faseProto.png"
-import faseProto2 from "../../../assets/faseProto2.png"; */
 import { Link } from "react-router-dom";
 import { TaskContext } from "../../../Context/TaskContext";
 import Pdf from "../../../assets/pdf/Prototipado.pdf";
 
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import creatica19 from '../../../assets/img/creatica19.svg'
+
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
@@ -48,6 +48,7 @@ function Phases() {
           Descargar
         </button>
         <br />
+        <img src={creatica19}></img>
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.

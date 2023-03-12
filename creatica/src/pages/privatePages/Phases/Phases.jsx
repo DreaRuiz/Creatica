@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import { HeaderUser } from "../../../components/HeaderUser";
-import fases1img from "../../../assets/fases1img.png";
-import fasesDef2 from "../../../assets/fasesDef2.png";
 import { Link } from "react-router-dom";
 import { TaskContext } from "../../../Context/TaskContext";
 import Pdf from "../../../assets/pdf/Definicion.pdf";
 
+
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import creatica20 from '../../../assets/img/creatica20.svg'
+
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
@@ -31,8 +32,8 @@ function Phases() {
           con lo que realmente aporta valor. Identificaremos problemas cuyas
           soluciones serán clave para la obtención de un resultado innovador.
         </p>
-        <img src={fases1img}></img>
         <br />
+        <img src={creatica20}></img>
 
         <h3>OBJETIVOS</h3>
         <ul>
@@ -40,7 +41,7 @@ function Phases() {
           <li>Conocer el campo en el que se desarollará el proyecto</li>
           <li>Definir qué te diferencia de la competencia</li>
         </ul>
-        <img src={fasesDef2}></img>
+  
         <br />
 
         <h3>MATERIAL</h3>

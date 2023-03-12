@@ -1,9 +1,9 @@
 import React from "react";
 import Footer from "../../components/Footer";
 import { HeaderHome } from "../../components/HeaderHome";
-import welcome from "../../assets/welcome.png";
-import sinTitulo_1 from "../../assets/sinTitulo_1.png";
 import { Link } from "react-router-dom";
+import creatica12 from '../../assets/img/creatica12.svg'
+import creatica7 from '../../assets/img/creatica7.svg'
 
 export function Welcome() {
   return (
@@ -14,7 +14,7 @@ export function Welcome() {
         <h1>
         Desarrolla tu proyecto poniendo la vida en el centro
         </h1>
-        <img src={welcome}></img>
+        <img src={creatica12}></img>
         <p className="text">
           Si no sabes por dónde empezar, este es tu lugar. Aquí podrás trabajar
           de manera más amable, consciente y respetuosa con tus ritmos.Es un
@@ -45,7 +45,7 @@ export function Welcome() {
             tenerlas siempre a mano.
           </p>
           
-          <img src={sinTitulo_1}></img>
+          <img src={creatica7}></img>
         </div>
       </div>
       <Footer />

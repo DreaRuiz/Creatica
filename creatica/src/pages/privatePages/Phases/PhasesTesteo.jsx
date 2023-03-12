@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
 import { HeaderUser } from "../../../components/HeaderUser";
-import fases1img from "../../../assets/fases1img.png";
-import fasesDef2 from "../../../assets/fasesDef2.png";
 import { Link } from "react-router-dom";
 import { TaskContext } from "../../../Context/TaskContext";
 import Pdf from "../../../assets/pdf/Testeo.pdf";
 
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import creatica8 from '../../../assets/img/creatica8.svg'
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
@@ -29,7 +28,7 @@ function Phases() {
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer too
         </p>
-        <img src={fases1img}></img>
+
         <br />
         <h3>OBJETIVOS</h3>
         <ul>
@@ -38,8 +37,8 @@ function Phases() {
           <li>Objetivo 3</li>
           <li>Objetivo 4</li>
         </ul>
-        <img src={fasesDef2}></img>
         <br />
+        <img src={creatica8}></img>
         <h3>MATERIAL</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.

@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import { useRef } from "react";
-import comofunciona from "../../assets/comofunciona.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import { HeaderHome } from "../../components/HeaderHome";
+import creatica13 from '../../assets/img/creatica13.svg'
 
 // FIREBASE ENVIA EL MAIL DE REESTABLIRPASS (al emailRef introduit validant que correspon a un user)
 const ForgotPassword = () => {
@@ -31,7 +31,7 @@ const ForgotPassword = () => {
       <div>
         <h2>REESTABLECER CONTRASEÑA</h2>
         <div>
-          <img src={comofunciona}></img>
+          <img src={creatica13}></img>
         </div>
         {error && (
           <>

@@ -38,9 +38,7 @@ function tracking() {
   return (
     <>
       <HeaderUser />
-
-      //TODO: Pensar color els botons
-      
+      {/*       //TODO: Pensar color els botons */}
       <h2 className="sectionTitle">TRAQUEA TUS HABITOS</h2>
       <div>
         <Link type="link" to={nextPage}>

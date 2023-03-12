@@ -1,6 +1,7 @@
 import React from "react";
 import { HeaderUser } from "../../../components/HeaderUser";
 import Pdf from "../../../assets/pdf/+info.pdf";
+import creatica22 from '../../../assets/img/creatica22.svg'
 
 function PhasesFinal() {
   function downloadPdf() {
@@ -19,6 +20,7 @@ function PhasesFinal() {
           del proyecto así que estudia tu público y escoge bien los canales y el
           tono comuncativo que utilizarás.
         </p>
+        <img src={creatica22}></img>
         <br />
         <p>
           Aquí puedes descargar recursos a finalizar tu proyecto.

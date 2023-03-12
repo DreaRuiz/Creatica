@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import loginImg from "../../assets/login.png";
 import { AuthContext } from "../../Context/AuthContext";
 import { HeaderHome } from "../../components/HeaderHome";
+
+import creatica9 from '../../assets/img/creatica9.svg'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const Login = () => {
       <div>
         <h1>¡HOLA!</h1>
         <div>
-          <img className="imageLogin" src={loginImg}></img>
+          <img className="image" src={creatica9} alt="Mujer escribiendo en un portatil"></img>
         </div>
 
         <form>
