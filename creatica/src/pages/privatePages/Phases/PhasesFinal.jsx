@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderUser } from "../../../components/Headeruser";
+import { HeaderUser } from "../../../components/HeaderUser";
 import Pdf from "../../../assets/pdf/+info.pdf";
 
 function PhasesFinal() {

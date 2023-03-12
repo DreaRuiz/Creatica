@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { HeaderUser } from "../../../components/Headeruser";
+import { HeaderUser } from "../../../components/HeaderUser";
 import fases1img from "../../../assets/fases1img.png";
 import fasesDef2 from "../../../assets/fasesDef2.png";
 import { Link } from "react-router-dom";
