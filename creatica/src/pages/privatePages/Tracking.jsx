@@ -38,11 +38,14 @@ function tracking() {
   return (
     <>
       <HeaderUser />
+
+      //TODO: Pensar color els botons
+      
       <h2 className="sectionTitle">TRAQUEA TUS HABITOS</h2>
       <div>
         <Link type="link" to={nextPage}>
           <button
-            className="btn btn-active  btn-warning mt-10 btn-wide btn-lg rounded-full"
+            className="btn btn-active btn-success mt-10 btn-wide btn-lg rounded-full"
             onClick={() => addTrack(currentTrack.positiveText)}
           >
             {currentTrack.positiveTitle}
@@ -52,7 +55,7 @@ function tracking() {
       <div>
         <Link type="link" to={nextPage}>
           <button
-            className="btn btn-active btn-success mt-10 btn-wide btn-lg rounded-full"
+            className="btn btn-active btn-secondary mt-10 btn-wide btn-lg rounded-full"
             onClick={() => addTrack(currentTrack.negativeText)}
           >
             {currentTrack.negativeTitle}

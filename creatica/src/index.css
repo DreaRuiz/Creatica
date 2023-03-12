@@ -55,3 +55,27 @@ h3{
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.card {
+  position: relative;
+}
+
+.btn-trash {
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+  border: none;
+}
+.rellevance {
+  position: absolute; 
+  top: 0;
+  left: 0;
+}
+.time {
+  position: absolute; 
+  top: 10px;
+  right: 10px;
+}
+.textTaskCard {
+  text-align: start;
+  background-color: transparent;
+}

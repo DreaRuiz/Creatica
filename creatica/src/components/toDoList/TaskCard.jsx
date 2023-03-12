@@ -22,23 +22,23 @@ function TaskCard({ task }) {
   return (
     <div className="card bg-base-100 shadow-xl m-3">
       <div>
-        <div className={`badge ${getBadgeColor(task.relevance)}`}>
+        <div className={`badge ${getBadgeColor(task.relevance)} rellevance`}>
           {task.relevance}
         </div>
         <div>
-          <p className="card-actions justify-end item-aling-top">
+          <p className="card-actions time">
             <FontAwesomeIcon className="mt-" icon={faClock} />
             {task.time}
           </p>
         </div>
-        <h2 className="card-title mt-3">{task.title}</h2>
-        <p className="card-actions justify-start"> {task.description}</p>
+        <h2 className="card-title mt-3 textTaskCard">{task.title}</h2>
+        <p className="card-actions textTaskCard"> {task.description}</p>
 
-        <p className="card-actions justify-start">Fase: {task.phase}</p>
+        <p className="card-actions textTaskCard">Fase: {task.phase}</p>
       </div>
-      <div className=" justify-end item-aling-down">
+      <div className="item-aling-down">
         <button
-          className="btn btn-outline btn-error rounded-full m-3 "
+          className="btn btn-outline btn-error btn-trash rounded-full m-3"
           onClick={() => deleteTask(task.id)}
         >
           <FontAwesomeIcon icon={faTrash} />

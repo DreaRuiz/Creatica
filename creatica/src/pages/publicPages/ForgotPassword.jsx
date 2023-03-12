@@ -29,7 +29,7 @@ const ForgotPassword = () => {
     <>
       <HeaderHome />
       <div>
-        <h3>REESTABLECER CONTRASEÑA</h3>
+        <h2>REESTABLECER CONTRASEÑA</h2>
         <div>
           <img src={comofunciona}></img>
         </div>
@@ -72,7 +72,7 @@ const ForgotPassword = () => {
             <label htmlFor="email">
               <p>Introduce tu email para cambiar la contraseña</p>
               <input
-                className="btn btn-primary rounded-full mt-3 mb-3 normal-case"
+                className="input input-bordered input-primary w-full max-w-xs mt-3 mb-3 rounded-full normal-case"
                 id="email"
                 name="email"
                 type="email"

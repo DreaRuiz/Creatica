@@ -10,3 +10,5 @@ const ErrorPage = () => {
   );
 };
 export default ErrorPage
+
+//TODO: Dissenyar la pàgina d'error

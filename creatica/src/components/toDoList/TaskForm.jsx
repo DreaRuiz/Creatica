@@ -28,7 +28,7 @@ function TaskForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form  className="card border" onSubmit={handleSubmit}>
         <div>
           <select
             className="select select-primary select-sm max-w-xs m-1 rounded-full"
@@ -69,7 +69,7 @@ function TaskForm() {
 
         <div>
           <input
-            className="input input-bordered input-primary w-full max-w-xs mt-3 mb-3 rounded-full"
+            className="input input-bordered input-primary w-full max-w-xs mt-3 mb-3 rounded-full "
             placeholder="Añade tarea"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
@@ -84,7 +84,7 @@ function TaskForm() {
             value={description}
           />
         </div>
-        <button className="btn btn-primary rounded-full mb-3"> GUARDAR </button>
+        <button className="btn btn-primary rounded-full mb-3 "> GUARDAR </button>
       </form>
     </>
   );
