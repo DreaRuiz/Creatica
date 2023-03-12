@@ -36,15 +36,13 @@ export function TaskContextProvider(props) {
 
   // MOSTRAR LA LLISTA (QUE VE DE FIREBASE)
   async function loadData() {
-    try {
-      const userRef = doc(db, "users", currentUser.uid);
-      const userData = await getDoc(userRef);
-      if (userData.exists()) {
-        setTasks(userData.data().userTaskList);
-      } else {
-      }
-    } catch (error) {
-      console.log(error);
+    if (currentUser == undefined) {
+      return;
+    }
+    const userRef = doc(db, "users", currentUser.uid);
+    const userData = await getDoc(userRef);
+    if (userData.exists()) {
+      setTasks(userData.data().userTaskList);
     }
   }
 
@@ -97,16 +95,15 @@ export function TaskContextProvider(props) {
     }
   };
   // BAIXAR ESTAT DE LES FASES DE FIRESTORE
+
   async function loadPhases() {
-    try {
-      const userRef = doc(db, "users", currentUser.uid);
-      const userData = await getDoc(userRef);
-      if (userData.exists()) {
-        setUserPhase(userData.data().userPhases);
-      } else {
-      }
-    } catch (error) {
-      console.log(error);
+    if (currentUser == undefined) {
+      return;
+    }
+    const userRef = doc(db, "users", currentUser.uid);
+    const userData = await getDoc(userRef);
+    if (userData.exists()) {
+      setUserPhase(userData.data().userPhases);
     }
   }
 
