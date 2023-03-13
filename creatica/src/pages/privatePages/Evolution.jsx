@@ -9,10 +9,9 @@ function Evolution() {
   return (
     <>
       <HeaderUser />
-      <h2>EVOLUCIÓN DEL PROYECTO</h2>
+      <h2>¡Vas avanzando en el proyecto!</h2>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
+        Con cada paso estás más cerca de mostrar tu producto al mundo.
       </p>
 
       <ul className="steps steps-vertical mt-5">

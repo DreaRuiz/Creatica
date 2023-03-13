@@ -58,7 +58,7 @@ function Phases() {
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.
         </p>
-        <Link type="link" to="/phasesIdeacion/">
+        <Link type="link" to="/Evolution/">
           <button
             className="btn btn-outline btn-secondary rounded-full mt-3 mb-3"
             onClick={() => savePhase(phase)}
