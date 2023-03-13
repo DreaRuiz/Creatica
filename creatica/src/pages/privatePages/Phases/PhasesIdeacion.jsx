@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
-
 import { HeaderUser } from "../../../components/HeaderUser";
 import { Link } from "react-router-dom";
 import { TaskContext } from "../../../Context/TaskContext";
 import Pdf from "../../../assets/pdf/Ideacion.pdf";
-
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import creatica14 from "../../../assets/img/creatica14.svg";
+
 function Phases() {
   const { savePhase } = useContext(TaskContext);
   const phase = { ideacion: true };
@@ -35,12 +34,14 @@ function Phases() {
 
         <br />
         <h3 className="divider">Objetivos</h3>
-        <ul>
+        <div className="containerList">
+          <ul className="list">
           <li>Indagar sobre las diferents soluciones a un mismo problema</li>
           <li>Escoger la mejor solución para implementar en tu proyecto</li>
           <li>Hacer un listado de los distintos caminos hacia esa solución</li>
           <li>Definir la idea en palabras simples</li>
         </ul>
+        </div>
         <img src={creatica14}alt="Mujer en silla de ruedas con una pantalla"></img>
         <br />
         <h3>Material</h3>

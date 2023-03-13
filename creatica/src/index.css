@@ -18,15 +18,12 @@ h3{
   color: #581c87;
   margin-top: 10px;
   margin-bottom: 10px;
-
-
 }
 .creatica{
   font-family: 'Merriweather', serif;
   font-weight: 800;
   color: #20D3B0
 }
-
 .subtextLogin
 {
   font-weight: 400;
@@ -96,7 +93,6 @@ h3{
   height: 50%;
   object-fit: cover;
 }
-
 .desktop-image {
   float: left;
   margin-right: 20px;
@@ -104,7 +100,6 @@ h3{
   height: auto;
   object-fit: cover;
 }
-
 .formRegister {
   position: absolute;
   top: 50%;
@@ -113,4 +108,30 @@ h3{
   width: 80%;
   max-width: 400px;
   z-index: 1;
+}
+.footer{
+  font-size: small;
+  text-align: center;
+  justify-content: center;
+}
+.textUps{
+  font-size: 25px;
+}
+
+.list{
+  text-align: left;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.containerList {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .containerList {
+    width: 70%;
+  }
 }

@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 import { TaskContext } from "../../../Context/TaskContext";
 import Pdf from "../../../assets/pdf/Definicion.pdf";
 
-
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import creatica20 from '../../../assets/img/creatica20.svg'
-
+import creatica20 from "../../../assets/img/creatica20.svg";
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
@@ -28,20 +26,26 @@ function Phases() {
         <h2>DEFINICIÓN</h2>
         <p>
           En esta fase, debemos recopilar y cribar la información para ir
-          conformando el marco de nuestro proyecto. Buscar referentes y quedarnos
-          con lo que realmente aporta valor. Identificaremos problemas cuyas
-          soluciones serán clave para la obtención de un resultado innovador.
+          conformando el marco de nuestro proyecto. Buscar referentes y
+          quedarnos con lo que realmente aporta valor. Identificaremos problemas
+          cuyas soluciones serán clave para la obtención de un resultado
+          innovador.
         </p>
         <br />
         <img src={creatica20} alt="Mujer con un microscopio"></img>
 
         <h3 className="divider">Objetivos</h3>
-        <ul>
+        <div className="containerList">
+        <ul className="list">
           <li>Definir qué problema solucionas</li>
-          <li>Conocer el campo en el que se desarollará el proyecto</li>
-          <li>Definir qué te diferencia de la competencia</li>
+          <li>
+            Conocer el campo en el que se desarollará el proyecto
+          </li>
+          <li>
+            Definir qué te diferencia de la competencia
+          </li>
         </ul>
-  
+</div>
         <br />
 
         <h3>Material</h3>

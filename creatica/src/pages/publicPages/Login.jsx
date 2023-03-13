@@ -2,12 +2,11 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import { HeaderHome } from "../../components/HeaderHome";
-
-import creatica9 from '../../assets/img/creatica9.svg'
+import creatica9 from "../../assets/img/creatica9.svg";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { login, email, setEmail, password, setPassword, error, setError } =
+  const { login, email, setEmail, password, setPassword, error } =
     useContext(AuthContext);
 
   // AUTENTIFICACIÓ / ERROR AL LOGIN
@@ -23,7 +22,6 @@ const Login = () => {
 
     setEmail("");
     setPassword("");
-
     navigate("/UserMenu");
   };
   return (
@@ -32,7 +30,11 @@ const Login = () => {
       <div>
         <h1>¡HOLA!</h1>
         <div>
-          <img className="image" src={creatica9} alt="Mujer sentada junto a una planta"></img>
+          <img
+            className="image"
+            src={creatica9}
+            alt="Mujer sentada junto a una planta"
+          ></img>
         </div>
 
         <form>
@@ -67,7 +69,11 @@ const Login = () => {
             </Link>
           </div>
 
-          <button className="btn btn-primary rounded-full mt-3" type="submit" onClick={onLogin}>
+          <button
+            className="btn btn-primary rounded-full mt-3"
+            type="submit"
+            onClick={onLogin}
+          >
             INICIA SESIÓN
           </button>
           <div>

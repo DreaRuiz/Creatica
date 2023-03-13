@@ -31,12 +31,14 @@ function Phases() {
 
         <br />
         <h3 className="divider">Objetivos</h3>
-        <ul>
-          <li>Objetivo 1</li>
-          <li>Objetivo 2</li>
-          <li>Objetivo 3</li>
-          <li>Objetivo 4</li>
+        <div className="containerList">
+          <ul className="list">
+          <li className="itemList">Objetivo 1</li>
+          <li className="itemList">Objetivo 2</li>
+          <li className="itemList">Objetivo 3</li>
+          <li className="itemList">Objetivo 4</li>
         </ul>
+        </div>
         <br />
         <img src={creatica8} alt="Mujer sentada en una maleta con un portatil"></img>
         <h3>Material</h3>

@@ -32,11 +32,13 @@ function Phases() {
         </p>
         <br />
         <h3 className="divider">Objetivos</h3>
-        <ul>
+        <div className="containerList">
+          <ul className="list">
           <li>Materializar la idea</li>
           <li>Resolver los problemas que surjan durante la construcción</li>
           <li>Conocer la viabilidad del producto</li>
         </ul>
+        </div>
         <h3>Material</h3>
         <br />
         <p>
@@ -64,7 +66,7 @@ function Phases() {
       <button><FontAwesomeIcon className="mr-4 ml-4" icon={faArrowRight}/></button>
       </Link>
     </>
-  );
+  )
 }
 
 export default Phases;
