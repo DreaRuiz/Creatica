@@ -23,7 +23,6 @@ import Recommendations from "../pages/privatePages/Recommendations";
 // Phases
 import PhasesIdeacion from "../pages/privatePages/Phases/PhasesIdeacion";
 import PhasesCreacion from "../pages/privatePages/Phases/PhasesCreacion";
-import PhasesPrototipado from "../pages/privatePages/Phases/PhasesPrototipado";
 import PhasesTesteo from "../pages/privatePages/Phases/PhasesTesteo";
 import PhasesFinal from "../pages/privatePages/Phases/PhasesFinal";
 
@@ -103,14 +102,6 @@ const Router = () => (
           element={
             <PrivateRoute>
               <PhasesCreacion />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/phasesPrototipado/"
-          element={
-            <PrivateRoute>
-              <PhasesPrototipado />
             </PrivateRoute>
           }
         />

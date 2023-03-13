@@ -13,7 +13,9 @@ const Login = () => {
   const onLogin = async (e) => {
     e.preventDefault();
     await login(email, password);
+    navigate("/Welcome")
     if (error) {
+      navigate("/Register")
       const errorCode = error.code;
       const errorMessage = error.message;
       alert("Invalid email or password");

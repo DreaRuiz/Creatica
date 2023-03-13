@@ -36,7 +36,7 @@ function Phases() {
         <h3 className="divider">Objetivos</h3>
         <div className="containerList">
           <ul className="list">
-            <li>Indagar sobre las diferents soluciones a un mismo problema</li>
+            <li>Indagar sobre las diferentes soluciones a un mismo problema</li>
             <li>Escoger la mejor solución para implementar en tu proyecto</li>
             <li>
               Hacer un listado de los distintos caminos hacia esa solución

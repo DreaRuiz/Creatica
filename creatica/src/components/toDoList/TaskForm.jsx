@@ -39,7 +39,6 @@ function TaskForm() {
             <option value="definición">Definición</option>
             <option value="ideación">Ideación</option>
             <option value="creación">Creación</option>
-            <option value="prototipado">Prototipado</option>
             <option value="testeo">Testeo</option>
           </select>
 

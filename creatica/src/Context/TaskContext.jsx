@@ -11,7 +11,6 @@ export function TaskContextProvider(props) {
     definicion: false,
     ideacion: false,
     creacion: false,
-    prototipado: false,
     testeo: false,
   });
 

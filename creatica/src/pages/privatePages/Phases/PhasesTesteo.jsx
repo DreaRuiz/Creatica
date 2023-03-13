@@ -23,19 +23,16 @@ function Phases() {
       <div className="welcome">
         <h2>TESTEO</h2>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer too
+          El testeo es una de las fases clave de cualquier proceso proyectual. Se trata de probar el producto, es recomendable que lo puedan testear personas con diferentes perfiles y obtener feedback de su experiencia. Esto te ayudará a mejorar tu producto y encaminar la comuninación. Piensa que lo que cambies lo harás para mejorar tu proyecto, no tengas miedo a dar pasos atras y retomar desde donde haga falta.
         </p>
 
         <br />
         <h3 className="divider">Objetivos</h3>
         <div className="containerList">
           <ul className="list">
-          <li className="itemList">Objetivo 1</li>
-          <li className="itemList">Objetivo 2</li>
-          <li className="itemList">Objetivo 3</li>
-          <li className="itemList">Objetivo 4</li>
+          <li className="itemList">Validar la viabilidad real del producto</li>
+          <li className="itemList">Conocer y poder mejorar aspectos que no habías tenido en cuenta</li>
+          <li className="itemList">Ver los puntos fuertes y débiles del proyecto</li>
         </ul>
         </div>
         <br />
@@ -58,7 +55,7 @@ function Phases() {
           </button>
         </Link>
       </div>
-      <Link type="link" to="/phasesPrototipado/">
+      <Link type="link" to="/phasesCreacion/">
       <button><FontAwesomeIcon className="mr-4 ml-4" icon={faArrowLeft}/></button>
       </Link>
       <Link type="link" to="/phasesFinal/">

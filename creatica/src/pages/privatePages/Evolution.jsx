@@ -38,13 +38,6 @@ function Evolution() {
           <Link to="/phasesCreacion/">Creación</Link>
         </li>
         <li
-          className={`step ${
-            userPhase.prototipado ? "step-primary" : ""
-          } stepsList`}
-        >
-          <Link to="/phasesPrototipado/">Prototipado</Link>
-        </li>
-        <li
           className={`step ${userPhase.testeo ? "step-primary" : ""} stepsList`}
         >
           <Link to="/phasesTesteo/">Testeo</Link>
