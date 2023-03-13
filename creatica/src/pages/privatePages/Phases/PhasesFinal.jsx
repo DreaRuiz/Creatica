@@ -20,10 +20,10 @@ function PhasesFinal() {
           del proyecto así que estudia tu público y escoge bien los canales y el
           tono comuncativo que utilizarás.
         </p>
-        <img src={creatica22}></img>
+        <img src={creatica22} alt="Persona sentada con un portatil"></img>
         <br />
         <p>
-          Aquí puedes descargar recursos a finalizar tu proyecto.
+          Aquí puedes descargar recursos que te ayudarán a finalizar tu proyecto.
         </p>
         <button className="btn btn-outline btn-accent rounded-full  mt-3 mb-3" onClick={downloadPdf}>
           Descargar

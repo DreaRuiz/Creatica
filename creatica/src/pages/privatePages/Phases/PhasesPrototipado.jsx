@@ -25,21 +25,19 @@ function Phases() {
       <div className="welcome">
         <h2>PROTOTIPADO</h2>
         <p>
-          En la etapa de Prototipado volvemos las ideas realidad. Construir
+          En la etapa de prototipado pasamos de la idea al producto/servicio. Construir
           prototipos hace las ideas palpables y nos ayuda a visualizar las
           posibles soluciones. Además, pone de manifiesto elementos que debemos
           mejorar, refinar o cambiar antes de llegar al resultado final.
         </p>
-        {/*         <img src={faseProto2}></img> */}
         <br />
-        <h3>OBJETIVOS</h3>
+        <h3 className="divider">Objetivos</h3>
         <ul>
           <li>Materializar la idea</li>
           <li>Resolver los problemas que surjan durante la construcción</li>
           <li>Conocer la viabilidad del producto</li>
         </ul>
-        {/*         <img src={fasesProto}></img> */}
-        <h3>MATERIAL</h3>
+        <h3>Material</h3>
         <br />
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
@@ -48,7 +46,7 @@ function Phases() {
           Descargar
         </button>
         <br />
-        <img src={creatica19}></img>
+        <img src={creatica19} alt="Persona con un lapiz gigante"></img>
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 
 import {
@@ -15,11 +15,18 @@ export const HeaderUser = () => {
   const handleLogOut = async () => {
     await logOut();
   };
+
+  // obtener la ruta actual
+  const location = useLocation();
+
+  // objeto de estilos para los iconos activos
+  const activeStyles = { color: "#65C3C8" };
+
   return (
     <>
-     <div className="navbar bg-white rounded-full p-0 mb-5 position-center w-full">
-  <div className="navbar flex justify-between items-center px-4">
-    <div className="dropdown">
+      <div className="navbar bg-white rounded-full p-0 mb-5 position-center w-full">
+        <div className="navbar flex justify-between items-center px-4">
+          <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,6 +48,9 @@ export const HeaderUser = () => {
               className="menu menu-compact dropdown-content mt-3 shadow bg-base-100 rounded-box w-50"
             >
               <li>
+                <Link to="/Welcome">Home</Link>
+              </li>
+              <li>
                 <Link to="/Evolution">Evolución</Link>
               </li>
               <li>
@@ -55,25 +65,38 @@ export const HeaderUser = () => {
           </div>
 
           <div className="icon-container flex justify-end">
-            <Link to="/Welcome">
-              {" "}
-              <FontAwesomeIcon className="mr-4 ml-4" icon={faHome} />
-            </Link>
-
             <div className="icon-container">
               <Link to="/Phases">
                 {" "}
-                <FontAwesomeIcon className="mr-4 ml-4" icon={faBook} />
+                <FontAwesomeIcon
+                  className="mr-4 ml-4"
+                  icon={faBook}
+                  style={
+                    location.pathname === "/Phases" ? activeStyles : undefined
+                  }
+                />
               </Link>
 
               <Link to="/Tracking/motivation">
                 {" "}
-                <FontAwesomeIcon className="mr-4 ml-4" icon={faPenToSquare} />
+                <FontAwesomeIcon
+                  className="mr-4 ml-4"
+                  icon={faPenToSquare}
+                  style={
+                    location.pathname === "/Tracking/motivation" ? activeStyles : undefined
+                  }
+                />
               </Link>
 
               <Link to="/ToDoList">
                 {" "}
-                <FontAwesomeIcon className="mr-4 ml-4" icon={faListCheck} />
+                <FontAwesomeIcon
+                  className="mr-4 ml-4"
+                  icon={faListCheck}
+                  style={
+                    location.pathname === "/ToDoList" ? activeStyles : undefined
+                  }
+                />
               </Link>
             </div>
           </div>

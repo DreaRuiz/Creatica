@@ -28,14 +28,14 @@ function Phases() {
         <h2>DEFINICIÓN</h2>
         <p>
           En esta fase, debemos recopilar y cribar la información para ir
-          conformando el marco de nuestro proyecto.Buscar referentes y quedarnos
+          conformando el marco de nuestro proyecto. Buscar referentes y quedarnos
           con lo que realmente aporta valor. Identificaremos problemas cuyas
           soluciones serán clave para la obtención de un resultado innovador.
         </p>
         <br />
-        <img src={creatica20}></img>
+        <img src={creatica20} alt="Mujer con un microscopio"></img>
 
-        <h3>OBJETIVOS</h3>
+        <h3 className="divider">Objetivos</h3>
         <ul>
           <li>Definir qué problema solucionas</li>
           <li>Conocer el campo en el que se desarollará el proyecto</li>
@@ -44,7 +44,7 @@ function Phases() {
   
         <br />
 
-        <h3>MATERIAL</h3>
+        <h3>Material</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
@@ -55,7 +55,6 @@ function Phases() {
           Descargar
         </button>
         <br />
-
         <p>
           Es importante que antes de pasar a la siguiente fase tengas definidos
           los objetivos de esta.

@@ -32,7 +32,7 @@ const Login = () => {
       <div>
         <h1>¡HOLA!</h1>
         <div>
-          <img className="image" src={creatica9} alt="Mujer escribiendo en un portatil"></img>
+          <img className="image" src={creatica9} alt="Mujer sentada junto a una planta"></img>
         </div>
 
         <form>

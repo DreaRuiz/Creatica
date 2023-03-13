@@ -29,16 +29,16 @@ function Phases() {
           since the 1500s, when an unknown printer too
         </p>
         <br />
-        <h3>OBJETIVOS</h3>
+        <h3 className="divider">Objetivos</h3>
         <ul>
           <li>Objetivo 1</li>
           <li>Objetivo 2</li>
           <li>Objetivo 3</li>
           <li>Objetivo 4</li>
         </ul>
-        <img src={creatica16}></img>
+        <img src={creatica16} alt="Mujer sentada con un portatil"></img>
         <br />
-        <h3>MATERIAL</h3>
+        <h3>Material</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>

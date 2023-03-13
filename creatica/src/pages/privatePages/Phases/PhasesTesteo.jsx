@@ -30,7 +30,7 @@ function Phases() {
         </p>
 
         <br />
-        <h3>OBJETIVOS</h3>
+        <h3 className="divider">Objetivos</h3>
         <ul>
           <li>Objetivo 1</li>
           <li>Objetivo 2</li>
@@ -38,8 +38,8 @@ function Phases() {
           <li>Objetivo 4</li>
         </ul>
         <br />
-        <img src={creatica8}></img>
-        <h3>MATERIAL</h3>
+        <img src={creatica8} alt="Mujer sentada en una maleta con un portatil"></img>
+        <h3>Material</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>

@@ -27,23 +27,23 @@ function Phases() {
           La fase de ideación tiene como objetivo la generación de opciones. No
           debemos quedarnos con la primera idea que se nos ocurra. En esta fase,
           las actividades favorecen el pensamiento expansivo y debemos eliminar
-          los juicios de valor. Cuándo hayas exporado las diferentes opciones
-          tendrás la capacidad para escoger la mejor. Esta fase debe acabar con
-          una idea clara y concisa sobre cómo resolver el problema elaborado en
+          los juicios de valor. Cuando hayas explorado las diferentes opciones
+          tendrás la capacidad para escoger la mejor. Esta etapa debe acabar con
+          una idea clara y concisa sobre cómo resolver el problema definido en
           la fase anterior.
         </p>
 
         <br />
-        <h3>OBJETIVOS</h3>
+        <h3 className="divider">Objetivos</h3>
         <ul>
           <li>Indagar sobre las diferents soluciones a un mismo problema</li>
           <li>Escoger la mejor solución para implementar en tu proyecto</li>
-          <li>Hacer un listado de los diferentes caminos hacia esa solución</li>
+          <li>Hacer un listado de los distintos caminos hacia esa solución</li>
           <li>Definir la idea en palabras simples</li>
         </ul>
-        <img src={creatica14}></img>
+        <img src={creatica14}alt="Mujer en silla de ruedas con una pantalla"></img>
         <br />
-        <h3>MATERIAL</h3>
+        <h3>Material</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.
         </p>
