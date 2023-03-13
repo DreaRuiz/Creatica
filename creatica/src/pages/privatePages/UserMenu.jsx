@@ -44,7 +44,7 @@ function UserMenu() {
           Además, podrás organizar y agendar tus tareas pendientes para tenerlas
           siempre a mano.
         </p>
-        <img src={creatica7} alt="Dos personas sentadas con un portatil cada una"></img>
+        <img src={creatica7} alt="Dos personas sentadas con un portatil cada una" className="my-image"></img>
       </div>
 
       <Footer />
@@ -53,9 +53,3 @@ function UserMenu() {
 }
 
 export default UserMenu;
-
-// TODO: Crear una pàgina d'aterratge on expliqui les diferents coses que pots fer
-<Link className="subtextLogin" type="link" to="/register/">
-  {" "}
-  O CREA UNA CUENTA{" "}
-</Link>;

@@ -11,7 +11,7 @@ const ForgotPassword = () => {
 
   const { resetPassword, error, setError, message, setMessage } =
     useContext(AuthContext);
-
+    
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -31,7 +31,7 @@ const ForgotPassword = () => {
       <div>
         <h2>REESTABLECER CONTRASEÑA</h2>
         <div>
-          <img src={creatica13} alt="Mujer saliendo de una tuerca"></img>
+          <img src={creatica13} alt="Mujer saliendo de una tuerca" className="my-image"></img>
         </div>
         {error && (
           <>

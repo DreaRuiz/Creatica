@@ -3,7 +3,6 @@ import { HeaderUser } from "../../../components/HeaderUser";
 import { Link } from "react-router-dom";
 import { TaskContext } from "../../../Context/TaskContext";
 import Pdf from "../../../assets/pdf/Testeo.pdf";
-
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import creatica8 from '../../../assets/img/creatica8.svg'
@@ -40,7 +39,7 @@ function Phases() {
         </ul>
         </div>
         <br />
-        <img src={creatica8} alt="Mujer sentada en una maleta con un portatil"></img>
+        <img src={creatica8} alt="Mujer sentada en una maleta con un portatil" className="my-image"></img>
         <h3>Material</h3>
         <p>
           Aquí puedes descargar recursos que te ayudarán a enfrentar esta fase.

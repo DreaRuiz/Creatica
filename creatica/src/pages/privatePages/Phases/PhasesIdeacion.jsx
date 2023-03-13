@@ -36,13 +36,19 @@ function Phases() {
         <h3 className="divider">Objetivos</h3>
         <div className="containerList">
           <ul className="list">
-          <li>Indagar sobre las diferents soluciones a un mismo problema</li>
-          <li>Escoger la mejor solución para implementar en tu proyecto</li>
-          <li>Hacer un listado de los distintos caminos hacia esa solución</li>
-          <li>Definir la idea en palabras simples</li>
-        </ul>
+            <li>Indagar sobre las diferents soluciones a un mismo problema</li>
+            <li>Escoger la mejor solución para implementar en tu proyecto</li>
+            <li>
+              Hacer un listado de los distintos caminos hacia esa solución
+            </li>
+            <li>Definir la idea en palabras simples</li>
+          </ul>
         </div>
-        <img src={creatica14}alt="Mujer en silla de ruedas con una pantalla"></img>
+        <img
+          src={creatica14}
+          alt="Mujer en silla de ruedas con una pantalla"
+          className="my-image"
+        ></img>
         <br />
         <h3>Material</h3>
         <p>

@@ -7,7 +7,7 @@ const ErrorPage = () => {
   return (
     <section>
       <HeaderHome />
-      <img src={creatica6} alt="Mapa"></img>
+      <img src={creatica6} alt="Mapa" className="my-image"></img>
       <h1 className="textUps">Ups! Parece que ha habido un error</h1>
       <Link className="link link-primary" type="link" to="/Welcome">
         {" "}

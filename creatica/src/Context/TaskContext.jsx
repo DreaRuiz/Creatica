@@ -95,7 +95,6 @@ export function TaskContextProvider(props) {
     }
   };
   // BAIXAR ESTAT DE LES FASES DE FIRESTORE
-
   async function loadPhases() {
     if (currentUser == undefined) {
       return;

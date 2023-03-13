@@ -24,12 +24,12 @@ const Recommendations = () => {
     if (currentUser == undefined) {
       return;
     }
-      const userRef = doc(db, "users", currentUser.uid);
-      const userData = await getDoc(userRef);
+    const userRef = doc(db, "users", currentUser.uid);
+    const userData = await getDoc(userRef);
 
-      if (userData.exists()) {
-        setRecommendations(userData.data().userTracking);
-      }
+    if (userData.exists()) {
+      setRecommendations(userData.data().userTracking);
+    }
   }
   if (recommendations.length === 0) {
     return (

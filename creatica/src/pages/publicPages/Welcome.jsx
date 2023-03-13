@@ -8,11 +8,12 @@ export function Welcome() {
   return (
     <>
       <HeaderHome />
-      <div className="welcome">
+      <div>
         <h1>Desarrolla tu proyecto poniendo la vida en el centro</h1>
         <img
           src={creatica12}
           alt="Mujer meditando con un calendario y un reloj"
+          className="my-image"
         ></img>
         <p className="text">
           Si no sabes por dónde empezar, este es tu lugar. Aquí podrás trabajar
@@ -25,28 +26,6 @@ export function Welcome() {
             EMPEZAR
           </button>
         </Link>
-       {/*  <h2>¿CÓMO FUNCIONA?</h2>
-        <div className="text">
-          <p>
-            En esta página encontrarás material para definir tu proyecto. Pensar
-            qué quieres, para quién, cómo, dónde y definir todos los conceptos
-            necesarios hasta llevarla a cabo. También tendrás acceso a material
-            exclusivo para ayudarte en cada fase de tu proyecto.
-          </p>
-          <br />
-          <p>
-            Podrás hacer un seguimiento de tu estado de ánimo y de las
-            diferentes capacidades de trabajo en cada momento. Con esto y las
-            recomendaciones diarias podrás sacarle el máximo partido a cada día
-            siguiendo tus propios ritmos.
-          </p>
-          <br />
-          <p>
-            Además, podrás organizar y agendar tus tareas pendientes para
-            tenerlas siempre a mano.
-          </p>
-          <img src={creatica7}></img>
-        </div> */}
       </div>
       <Footer />
     </>

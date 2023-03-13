@@ -3,7 +3,6 @@ import { HeaderUser } from "../../../components/HeaderUser";
 import { Link } from "react-router-dom";
 import { TaskContext } from "../../../Context/TaskContext";
 import Pdf from "../../../assets/pdf/Definicion.pdf";
-
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import creatica20 from "../../../assets/img/creatica20.svg";
@@ -32,20 +31,16 @@ function Phases() {
           innovador.
         </p>
         <br />
-        <img src={creatica20} alt="Mujer con un microscopio"></img>
+        <img src={creatica20} alt="Mujer con un microscopio" className="my-image"></img>
 
         <h3 className="divider">Objetivos</h3>
         <div className="containerList">
-        <ul className="list">
-          <li>Definir qué problema solucionas</li>
-          <li>
-            Conocer el campo en el que se desarollará el proyecto
-          </li>
-          <li>
-            Definir qué te diferencia de la competencia
-          </li>
-        </ul>
-</div>
+          <ul className="list">
+            <li>Definir qué problema solucionas</li>
+            <li>Conocer el campo en el que se desarollará el proyecto</li>
+            <li>Definir qué te diferencia de la competencia</li>
+          </ul>
+        </div>
         <br />
 
         <h3>Material</h3>

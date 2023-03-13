@@ -9,10 +9,7 @@ function ToDoList() {
       <HeaderUser />
       <h2>LISTA DE TAREAS</h2>
       <div className="todolist">
-    
-          <h3 className="divider">Añade una tarea</h3>
-   
-
+        <h3 className="divider">Añade una tarea</h3>
         <TaskForm />
       </div>
       <div>

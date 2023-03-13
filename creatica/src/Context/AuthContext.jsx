@@ -12,8 +12,7 @@ import {
 import { setDoc, doc } from "firebase/firestore";
 import { auth, db } from "../config/firebase";
 
-// CREO EL CONTEXT I EL PROVIDER
-
+// CREA EL CONTEXT I EL PROVIDER
 export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   // ESTATS
@@ -44,7 +43,7 @@ export const AuthProvider = ({ children }) => {
         userTaskList: [],
         userTracking: [],
         userPhases: [],
-        //* Aquí posar les coses que s'han de guardar a la base de dades (de cada user)
+        // Aquí posar les coses que s'han de guardar a la base de dades (de cada user)
       });
       return true;
     } catch (error) {}
@@ -76,7 +75,6 @@ export const AuthProvider = ({ children }) => {
   const logOut = async () => {
     try {
       await signOut(auth);
-      /*  navigate('/Welcome'); // Quan tanquis sessió ves a Welcome */
       return true;
     } catch (error) {
       return false;
@@ -117,7 +115,6 @@ export const AuthProvider = ({ children }) => {
         login,
         resetPassword,
         logOut,
- 
       }}
     >
       {children}

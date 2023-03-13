@@ -11,15 +11,15 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const HeaderUser = () => {
-  const { logOut, currentUser } = useContext(AuthContext);
+  const { logOut } = useContext(AuthContext);
   const handleLogOut = async () => {
     await logOut();
   };
 
-  // obtener la ruta actual
+  // OBTENIR LA RUTA ACTUAL
   const location = useLocation();
 
-  // objeto de estilos para los iconos activos
+  // ESTIL PER LES ICONES ACTIVES
   const activeStyles = { color: "#65C3C8" };
 
   return (
@@ -83,7 +83,9 @@ export const HeaderUser = () => {
                   className="mr-4 ml-4"
                   icon={faPenToSquare}
                   style={
-                    location.pathname === "/Tracking/motivation" ? activeStyles : undefined
+                    location.pathname === "/Tracking/motivation"
+                      ? activeStyles
+                      : undefined
                   }
                 />
               </Link>

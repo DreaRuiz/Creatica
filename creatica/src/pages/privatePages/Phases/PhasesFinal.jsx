@@ -20,7 +20,7 @@ function PhasesFinal() {
           del proyecto así que estudia tu público y escoge bien los canales y el
           tono comuncativo que utilizarás.
         </p>
-        <img src={creatica22} alt="Persona sentada con un portatil"></img>
+        <img src={creatica22} alt="Persona sentada con un portatil" className="my-image"></img>
         <br />
         <p>
           Aquí puedes descargar recursos que te ayudarán a finalizar tu proyecto.

@@ -10,18 +10,19 @@ import { HeaderUser } from "../../components/HeaderUser";
 function tracking() {
   // PORTA CURRENTUSER DEL CONTEXT
   const { currentUser } = useContext(AuthContext);
+
   // CREA ARRAT ON ES GUARARÀN ELS TEXTOS DEL TRACK
   const [selectedTracks, setSelectedTracks] = useState([]);
 
   // URL I CARREGAR LA SEGÜENT PÀGINA
   const trackingId = useParams().trackingId;
-  const currentTrack = userRecom[trackingId]; // key del current track
-  const keys = Object.keys(userRecom); // Aconsegueixo l'array de keys
-  const currentIndex = keys.indexOf(trackingId); // Posició per índex dins l'array de keys
-  const nextTrackingId = keys[currentIndex + 1]; // Indica quina és la posició del següent títol
-  let nextPage = "/tracking/" + nextTrackingId; // Ruta cap a la següent pàgina
+  const currentTrack = userRecom[trackingId];
+  const keys = Object.keys(userRecom);
+  const currentIndex = keys.indexOf(trackingId);
+  const nextTrackingId = keys[currentIndex + 1];
+  let nextPage = "/tracking/" + nextTrackingId;
   if (nextTrackingId == null) {
-    nextPage = "/recommendations"; // Quan no hi ha més pàgines (objectes al json) salta a recomanacions.
+    nextPage = "/recommendations";
   }
 
   // GUARDAR A UN ARRAY ELS SELECCIONATS
@@ -38,12 +39,11 @@ function tracking() {
   return (
     <>
       <HeaderUser />
-      {/*       //TODO: Pensar color els botons */}
       <h2 className="sectionTitle">TRAQUEA TUS HABITOS</h2>
       <div>
         <Link type="link" to={nextPage}>
           <button
-            className="btn btn-active btn-success mt-10 btn-wide btn-lg rounded-full"
+            className="btn btn-active btn-accent mt-10 btn-wide btn-lg rounded-full"
             onClick={() => addTrack(currentTrack.positiveText)}
           >
             {currentTrack.positiveTitle}
@@ -53,7 +53,7 @@ function tracking() {
       <div>
         <Link type="link" to={nextPage}>
           <button
-            className="btn btn-active btn-secondary mt-10 btn-wide btn-lg rounded-full"
+            className="btn btn-active btn-primary mt-10 btn-wide btn-lg rounded-full"
             onClick={() => addTrack(currentTrack.negativeText)}
           >
             {currentTrack.negativeTitle}

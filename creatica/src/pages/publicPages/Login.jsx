@@ -31,7 +31,7 @@ const Login = () => {
         <h1>¡HOLA!</h1>
         <div>
           <img
-            className="image"
+            className="image my-image"
             src={creatica9}
             alt="Mujer sentada junto a una planta"
           ></img>
