@@ -9,6 +9,7 @@ import { faListCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { HeaderUser } from "../../components/HeaderUser";
+import creatica11 from "../../assets/img/creatica11.svg";
 
 const Recommendations = () => {
   const { currentUser } = useContext(AuthContext);
@@ -51,7 +52,23 @@ const Recommendations = () => {
     <div>
       <HeaderUser />
       <h2>RECOMENDACIONES</h2>
-      <p>{recommendations}</p>
+      <div className="recom">
+      <img
+            className="image my-image"
+            src={creatica11}
+            alt="Mujer sentada junto a una planta"
+          ></img>
+      <p>{recommendations[0]}</p>
+      <br/>
+      <p>{recommendations[1]}</p>
+      <br/>
+      <p>{recommendations[2]}</p>
+      <br/>
+      <p>{recommendations[3]}</p>
+      <br/>
+      <p>{recommendations[4]}</p>
+      </div>
+{/*       <p>{recommendations}</p> */}
     </div>
   );
 };
