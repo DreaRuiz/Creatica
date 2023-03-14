@@ -24,11 +24,7 @@ function Phases() {
       <div>
         <h2>DEFINICIÓN</h2>
         <p>
-          En esta fase, debemos recopilar y cribar la información para ir
-          conformando el marco de nuestro proyecto. Buscar referentes y
-          quedarnos con lo que realmente aporta valor. Identificaremos problemas
-          cuyas soluciones serán clave para la obtención de un resultado
-          innovador.
+          En esta fase, debemos recopilar y seleccionar la información más relevante para conformar el marco de nuestro proyecto. Es importante buscar referentes y evaluar qué aporta realmente valor. También debemos identificar los problemas cuyas soluciones serán clave para lograr un resultado innovador.
         </p>
         <br />
         <img src={creatica20} alt="Mujer con un microscopio" className="my-image"></img>

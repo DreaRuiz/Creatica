@@ -23,7 +23,7 @@ function Phases() {
       <div className="welcome">
         <h2>TESTEO</h2>
         <p>
-          El testeo es una de las fases clave de cualquier proceso proyectual. Se trata de probar el producto, es recomendable que lo puedan testear personas con diferentes perfiles y obtener feedback de su experiencia. Esto te ayudará a mejorar tu producto y encaminar la comuninación. Piensa que lo que cambies lo harás para mejorar tu proyecto, no tengas miedo a dar pasos atras y retomar desde donde haga falta.
+        "El testing es una etapa fundamental de cualquier proceso de proyecto. Se trata de probar el producto o servicio, y es recomendable que se involucren personas con diferentes perfiles para obtener una retroalimentación valiosa sobre su experiencia. Esto te ayudará a mejorar el producto y orientar tu estrategia de comunicación. Es importante recordar que cualquier cambio que realices es para mejorar tu proyecto, por lo que tengas miedo a retroceder y retomar desde donde sea necesario.
         </p>
 
         <br />

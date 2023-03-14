@@ -16,9 +16,7 @@ function PhasesFinal() {
       <div className="welcome">
         <h2>¡ENHORABUENA HAS ACABADO EL PROYECTO!</h2>
         <p>
-          Ahora solo queda lanzarlo al mundo. La comunicación es una fase más
-          del proyecto así que estudia tu público y escoge bien los canales y el
-          tono comuncativo que utilizarás.
+          Una vez que tenemos nuestro producto o servicio, es hora de lanzarlo al mundo. En esta fase, la comunicación es fundamental, por lo que debemos estudiar a nuestro público objetivo y elegir cuidadosamente los canales y el tono de comunicación que utilizaremos.
         </p>
         <img src={creatica22} alt="Persona sentada con un portatil" className="my-image"></img>
         <br />

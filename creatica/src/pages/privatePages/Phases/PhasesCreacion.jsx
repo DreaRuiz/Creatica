@@ -22,10 +22,7 @@ function Phases() {
       <div className="welcome">
         <h2>CREACIÓN</h2>
         <p>
-          En la etapa de creación pasamos de la idea al producto/servicio.
-          Construir prototipos hace las ideas palpables y nos ayuda a visualizar
-          las posibles soluciones. Además, pone de manifiesto elementos que
-          debemos mejorar, refinar o cambiar antes de llegar al resultado final.
+        En la etapa de creación, pasamos de la idea al producto o servicio. Construir prototipos nos permite visualizar las posibles soluciones y detectar elementos que necesitan ser mejorados, refinados o cambiados antes de llegar al resultado final.
         </p>
         <br />
         <h3 className="divider">Objetivos</h3>

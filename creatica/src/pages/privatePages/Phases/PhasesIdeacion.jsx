@@ -23,13 +23,7 @@ function Phases() {
       <div className="welcome">
         <h2>IDEACIÓN</h2>
         <p>
-          La fase de ideación tiene como objetivo la generación de opciones. No
-          debemos quedarnos con la primera idea que se nos ocurra. En esta fase,
-          las actividades favorecen el pensamiento expansivo y debemos eliminar
-          los juicios de valor. Cuando hayas explorado las diferentes opciones
-          tendrás la capacidad para escoger la mejor. Esta etapa debe acabar con
-          una idea clara y concisa sobre cómo resolver el problema definido en
-          la fase anterior.
+          La fase de ideación tiene como objetivo generar múltiples opciones. Es importante no quedarnos con la primera idea que se nos ocurra. En esta fase, debemos fomentar el pensamiento expansivo y evitar juzgar las opciones. Después de explorar diferentes opciones, tendremos la capacidad de elegir la mejor. Esta etapa debe concluir con una idea clara y concisa sobre cómo resolver el problema definido en la fase anterior.
         </p>
 
         <br />
