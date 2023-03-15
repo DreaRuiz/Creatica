@@ -13,7 +13,7 @@ const Login = () => {
   const onLogin = async (e) => {
     e.preventDefault();
     await login(email, password);
-    navigate("/Welcome")
+    navigate("/Welcome");
     if (error) {
       const errorCode = error.code;
       const errorMessage = error.message;

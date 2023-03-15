@@ -11,4 +11,4 @@ export const manageLocalStorage = (key, state, setState) => {
 
   // GUARDAR LA INFO AL LOCALSTORAGE (QUAN EL CODI ESTÀ FUNCIONANT)
   useEffect(() => localStorage.setItem(key, JSON.stringify(state)), [state]);
-}
+};

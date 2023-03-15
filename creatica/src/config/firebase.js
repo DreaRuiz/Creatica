@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore } from "firebase/firestore";
 
 import "firebase/firestore";
 
@@ -12,7 +12,7 @@ const firebaseConfig = {
   projectId: "s9-creatica",
   storageBucket: "s9-creatica.appspot.com",
   messagingSenderId: "501954067232",
-  appId: "1:501954067232:web:dae4477e7ee4083ca47545"
+  appId: "1:501954067232:web:dae4477e7ee4083ca47545",
 };
 
 // Initialize Firebase
@@ -22,4 +22,4 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-export {auth, db};
+export { auth, db };

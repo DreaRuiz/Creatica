@@ -14,7 +14,6 @@ function TaskList() {
   // ORDENAR TASQUES SEGONS LA RELLEVÀNCIA
   let sortedTasks = [...tasks];
   if (shouldSort) {
-    // Ordena solo si shouldSort es verdadero
     sortedTasks = tasks.sort((a, b) => {
       if (a.relevance === "urgente" && b.relevance !== "urgente") {
         return -1;

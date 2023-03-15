@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function TaskCard({ task }) {
   const { deleteTask } = useContext(TaskContext);
 
+  // INDICADOR DE RELLEVÀNCIA (COLOR)
   function getBadgeColor(relevance) {
     if (relevance === "urgente") {
       return "badge-error";

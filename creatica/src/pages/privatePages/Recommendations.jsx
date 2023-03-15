@@ -63,12 +63,12 @@ const Recommendations = () => {
       <HeaderUser />
       <h2>RECOMENDACIONES</h2>
       <div className="recom">
-      <div>
-        <img
-          className="image my-image"
-          src={creatica11}
-          alt="Mujer sentada junto a una planta"
-        ></img>
+        <div>
+          <img
+            className="image my-image"
+            src={creatica11}
+            alt="Mujer sentada junto a una planta"
+          ></img>
         </div>
         <br />
         <p style={{ alignItems: "center" }}>
