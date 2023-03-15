@@ -5,6 +5,8 @@ import { TaskContext } from "../../../Context/TaskContext";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import creatica19 from "../../../assets/img/creatica19.svg";
+import Pdf from "../../../assets/pdf/Creacion.pdf";
+
 
 function Phases() {
   const { savePhase } = useContext(TaskContext);
