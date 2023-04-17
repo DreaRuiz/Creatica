@@ -7,15 +7,13 @@ import creatica12 from "../../assets/img/creatica12.svg";
 import { AuthContext } from "../../Context/AuthContext";
 import { useContext } from "react";
 
+export function Welcome() {
+  const { currentUser } = useContext(AuthContext);
 
-  export function Welcome ({ children }) {
-    const { currentUser } = useContext(AuthContext);
-console.log( "currentUser",   currentUser)
-  
-    return (
-      <>
-    {currentUser ? <HeaderUser /> : <HeaderHome />}
-      
+  return (
+    <>
+      {currentUser ? <HeaderUser /> : <HeaderHome />}
+
       <div>
         <h1>Desarrolla tu proyecto poniendo la vida en el centro</h1>
         <img
