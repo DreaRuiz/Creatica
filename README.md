@@ -1,7 +1,7 @@
 # CREATICA
 Application for managing projects and organizing the development process.
 
-You can access the project [here](https://creatica-org47cz4b-drearuiz.vercel.app/)
+You can access the project [here](https://creatica-drearuiz.vercel.app/)
 
 
 ## Built With
