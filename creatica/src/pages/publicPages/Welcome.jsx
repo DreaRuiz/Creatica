@@ -1,13 +1,21 @@
 import React from "react";
 import Footer from "../../components/Footer";
 import { HeaderHome } from "../../components/HeaderHome";
+import { HeaderUser } from "../../components/HeaderUser";
 import { Link } from "react-router-dom";
 import creatica12 from "../../assets/img/creatica12.svg";
+import { AuthContext } from "../../Context/AuthContext";
+import { useContext } from "react";
 
-export function Welcome() {
-  return (
-    <>
-      <HeaderHome />
+
+  export function Welcome ({ children }) {
+    const { currentUser } = useContext(AuthContext);
+console.log( "currentUser",   currentUser)
+  
+    return (
+      <>
+    {currentUser ? <HeaderUser /> : <HeaderHome />}
+      
       <div>
         <h1>Desarrolla tu proyecto poniendo la vida en el centro</h1>
         <img
