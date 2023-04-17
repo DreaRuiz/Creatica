@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -18,10 +18,18 @@ function Register() {
   } = useContext(AuthContext);
 
   // CREACIÓ D'UN NOU USER & VALIDACIÓ / ERROR
+  const [passwordError, setPasswordError] = useState("");
+
   const onSubmit = async (e) => {
     e.preventDefault();
-    await signup(email, password);
 
+    if (password.length < 6) {
+      setPasswordError("La contraseña debe tener al menos 6 caracteres");
+      alert("La contraseña debe tener al menos 6 caracteres");
+      return
+    }
+
+    await signup(email, password);
     navigate("/welcome");
 
     if (error) {
