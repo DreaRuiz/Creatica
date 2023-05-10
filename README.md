@@ -38,7 +38,7 @@ This application allows you to find:
 
 ## How to Install
 1. Clone 
-    > `git clone https://github.com/DreaRuiz/S9-Creatica.git`
+    > `git clone https://github.com/DreaRuiz/Creatica.git`
 2. Enter the folder
     > `cd <creatica>`
 3. Install dependencies 
